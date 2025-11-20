@@ -1,0 +1,70 @@
+# ========== Unity Generated Folders ==========
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# ========== Visual Studio / JetBrains ==========
+[Vv]isual[Ss]tudio/
+.vs/
+.vscode/
+.idea/
+
+# ========== Cache & Auto Files ==========
+sysinfo.txt
+*.stackdump
+*.pidb
+*.suo
+*.user
+*.userprefs
+*.unityproj
+*.booproj
+*.svd
+*.opendb
+*.VC.db
+
+# ========== Unity Asset Store ==========
+*.unitypackage
+
+# ========== Crash & Generated Files ==========
+*.apk
+*.aab
+*.symbols
+*.crash
+
+# ========== Builds ==========
+*.exe
+*.app
+*.xcodeproj
+*.xcworkspace
+
+# ========== Scriptable Build Pipeline Cache ==========
+ScriptableBuildPipeline/
+
+# ========== Collaborate (Legacy) ==========
+.collabignore
+.collab/
+
+# ========== Rider Unity Plugin ==========
+*.csproj
+*.sln
+
+# ========== OS Platform Specific ==========
+# Windows
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# ========== Unity Cloud Build ==========
+/[Uu]serSettings/EditorUserSettings.asset
+
+# ========== Addressables ==========
+/[Tt]emp/GeneratedShader/
