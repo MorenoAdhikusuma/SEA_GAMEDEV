@@ -37,6 +37,30 @@ public class Boss_health : MonoBehaviour
         }
     }
 
+    // Call this whenever boss takes damage
+    public void TakeDamage(int amount)
+    {
+        currentHealth -= amount;
+
+        // Clamp to prevent negative values
+        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+
+        // Update UI bar
+        if (healthBar != null)
+            healthBar.fillAmount = (float)currentHealth / (float)maxHealth;
+
+        if (currentHealth <= 0)
+            Die();
+    }
+
+    private void Die()
+    {
+        Debug.Log("Boss defeated!");
+        gameObject.SetActive(false);
+        HealthBarHide();
+        Destroy(gameObject);
+    }
+
     // Update is called once per frame
     void Update()
     {

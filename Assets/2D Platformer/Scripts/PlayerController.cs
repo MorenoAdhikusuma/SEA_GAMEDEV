@@ -20,6 +20,8 @@ namespace Platformer
         private Rigidbody2D rigidbody;
         private Animator animator;
         private GameManager gameManager;
+        public Boss_health  bossHealth;
+
 
         void Start()
         {
@@ -60,6 +62,8 @@ namespace Platformer
             {
                 Flip();
             }
+
+            Fighting();
         }
 
         private void Flip()
@@ -94,6 +98,16 @@ namespace Platformer
             {
                 gameManager.coinsCounter += 1;
                 Destroy(other.gameObject);
+            }
+        }
+
+        private void Fighting()
+        {
+            // To be implemented
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                Debug.Log("PUNCH!");
+                bossHealth.TakeDamage(10);
             }
         }
     }
