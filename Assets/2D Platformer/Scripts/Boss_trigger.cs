@@ -4,10 +4,11 @@ public class Boss_trigger : MonoBehaviour
 {
 
     public GameObject boss;
+    private Boss_health bossHealth;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
+        bossHealth = boss.GetComponent<Boss_health>();
         if(boss != null)
         {
             boss.SetActive(false);
@@ -22,6 +23,16 @@ public class Boss_trigger : MonoBehaviour
         {
             Debug.Log("Boss Triggered");
             boss.SetActive(true);
+            bossHealth.HealthBarShow();
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("Boss Trigger Exit");
+            bossHealth.HealthBarHide();
         }
     }
 
