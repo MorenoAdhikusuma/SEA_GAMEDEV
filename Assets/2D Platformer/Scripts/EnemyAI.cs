@@ -1,40 +1,37 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace Platformer
+public class EnemyAI : MonoBehaviour
 {
-    public class EnemyAI : MonoBehaviour
+    public float speed = 2f;
+    public Transform leftPoint;
+    public Transform rightPoint;
+
+    private float direction = 1f;
+    private Rigidbody2D rb;
+
+    private void Start()
     {
-        public float moveSpeed = 1f; 
-        public LayerMask ground;
-        public LayerMask wall;
-
-        private Rigidbody2D rigidbody; 
-        public Collider2D triggerCollider;
+        rb = GetComponent<Rigidbody2D>();
         
-        void Start()
-        {
-            rigidbody = GetComponent<Rigidbody2D>();
-        }
+        // detach patrol points from parent so they stay in place
+        leftPoint.parent = null;
+        rightPoint.parent = null;
+    }
 
-        void Update()
-        {
-            rigidbody.linearVelocity = new Vector2(moveSpeed, rigidbody.linearVelocity.y);
-        }
+    private void Update()
+    {
+        rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
 
-        void FixedUpdate()
-        {
-            if(!triggerCollider.IsTouchingLayers(ground) || triggerCollider.IsTouchingLayers(wall))
-            {
-                Flip();
-            }
-        }
-        
-        private void Flip()
-        {
-            transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-            moveSpeed *= -1;
-        }
+        if (direction > 0 && transform.position.x >= rightPoint.position.x)
+            Flip();
+
+        if (direction < 0 && transform.position.x <= leftPoint.position.x)
+            Flip();
+    }
+
+    private void Flip()
+    {
+        direction *= -1;
+        transform.localScale = new Vector3(direction, 1f, 1f);
     }
 }
