@@ -20,7 +20,11 @@ namespace Platformer
         private Rigidbody2D rigidbody;
         private Animator animator;
         private GameManager gameManager;
-        public Boss_health  bossHealth;
+       
+
+         public Transform firePoint;      // Gun muzzle or spawn point
+    public GameObject bulletPrefab;  // Your bullet prefab
+    public float bulletSpeed = 10f;
 
 
         void Start()
@@ -61,9 +65,11 @@ namespace Platformer
             else if(facingRight == true && moveInput < 0)
             {
                 Flip();
+            }   
+            if (Input.GetMouseButtonDown(0))
+            {
+                ProjectileShoot();
             }
-
-            Fighting();
         }
 
         private void Flip()
@@ -101,14 +107,18 @@ namespace Platformer
             }
         }
 
-        private void Fighting()
+        private void ProjectileShoot()
         {
-            // To be implemented
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                Debug.Log("PUNCH!");
-                bossHealth.TakeDamage(10);
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition.z = 0f;
+            Vector2 direction = (mousePosition - transform.position).normalized;
+            GameObject projectile = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+            Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+            rb.linearVelocity = direction * bulletSpeed;
+        }
+                //Debug.Log("PUNCH!");
+                //bossHealth.TakeDamage(10);
             }
         }
-    }
-}
+
+
