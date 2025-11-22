@@ -5,15 +5,16 @@ using System.Collections.Generic;
 public class Hit_regis : MonoBehaviour
 {
     public Boss_health bossHealth;
+    public float autoDestroyTime = 1f;
 
     void Start()
     {
+        Destroy(gameObject, autoDestroyTime);
+          // Destroy projectile after a set time
         // Auto-find the Boss_health script in the scene
         if (bossHealth == null)
         {
-            bossHealth = FindObjectOfType<Boss_health>();
-            if (bossHealth == null)
-                Debug.LogError("Boss_health NOT FOUND in scene!");
+            bossHealth = FindObjectOfType<Boss_health>();   
         }
     }
 
@@ -22,29 +23,18 @@ public class Hit_regis : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
-            Destroy(gameObject);
-            Debug.Log("Hit registered on enemy!");
+            Destroy(transform.root.gameObject);
         }
 
         if (collision.CompareTag("Ground"))
         {
-            Destroy(gameObject);
-            Debug.Log("Projectile destroyed on ground hit.");
+           Destroy(transform.root.gameObject);
         }
 
         if (collision.CompareTag("Boss"))
         {
-            if (bossHealth == null)
-            {
-                Debug.LogError("BossHealth reference is missing!");
-            }
-            else
-            {
-                bossHealth.TakeDamage(10);
-            }
-
-            Destroy(gameObject); // Destroy projectile after hitting boss
-            Debug.Log("Hit registered on boss!");
+            bossHealth.TakeDamage(10);
+            Destroy(transform.root.gameObject);
         }
     }
 }

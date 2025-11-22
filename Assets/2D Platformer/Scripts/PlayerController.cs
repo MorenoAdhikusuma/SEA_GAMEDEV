@@ -25,6 +25,8 @@ namespace Platformer
          public Transform firePoint;      // Gun muzzle or spawn point
     public GameObject bulletPrefab;  // Your bullet prefab
     public float bulletSpeed = 10f;
+    public float fireRate = 0.5f;      
+    private float nextFireTime = 0f;
 
 
         void Start()
@@ -66,9 +68,10 @@ namespace Platformer
             {
                 Flip();
             }   
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && Time.time >= nextFireTime)
             {
                 ProjectileShoot();
+                nextFireTime = Time.time + fireRate;
             }
         }
 
@@ -116,8 +119,7 @@ namespace Platformer
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
             rb.linearVelocity = direction * bulletSpeed;
         }
-                //Debug.Log("PUNCH!");
-                //bossHealth.TakeDamage(10);
+
             }
         }
 

@@ -351,8 +351,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc7f5978d467204e98c5fe9e31ce15a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Boss_health
-  maxHealth: 100
-  currentHealth: 100
+  maxHealth: 1000
+  currentHealth: 1000
   healthBar: {fileID: 748811772}
   healthBarCanvas: {fileID: 748811769}
 --- !u!1 &229945066
