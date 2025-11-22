@@ -338,7 +338,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 841ef699512c8634b85e90b769c0fd47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossAI
-  moveSpeed: 2
+  projectilePrefab: {fileID: 2825989278985155377, guid: 113665d49488d384ebb8e65f95fbc749, type: 3}
+  projectileSpeed: 8
+  fireRate: 1
+  spreadAngle: 50
+  firePoint: {fileID: 2051874840}
+  player: {fileID: 1916759681}
 --- !u!114 &218500955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,6 +360,11 @@ MonoBehaviour:
   currentHealth: 1000
   healthBar: {fileID: 748811772}
   healthBarCanvas: {fileID: 748811769}
+--- !u!4 &218500958 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4192718172865211736, guid: 4104fd1466bfc41479cbe307e37809c0, type: 3}
+  m_PrefabInstance: {fileID: 7198245104922064238}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &229945066
 GameObject:
   m_ObjectHideFlags: 0
@@ -22556,6 +22566,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2051874839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2051874840}
+  m_Layer: 0
+  m_Name: muzzle
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2051874840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051874839}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.81, y: -0.67, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 218500958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &818934064235043039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22938,6 +22979,10 @@ PrefabInstance:
       value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 6952628394585513909, guid: a3dc7dd79a2fbc341a3fc828503f1ca9, type: 3}
+      propertyPath: fireRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6952628394585513909, guid: a3dc7dd79a2fbc341a3fc828503f1ca9, type: 3}
       propertyPath: firePoint
       value: 
       objectReference: {fileID: 812378270}
@@ -22945,6 +22990,10 @@ PrefabInstance:
       propertyPath: bossHealth
       value: 
       objectReference: {fileID: 218500955}
+    - target: {fileID: 6952628394585513909, guid: a3dc7dd79a2fbc341a3fc828503f1ca9, type: 3}
+      propertyPath: bulletSpeed
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6952628394585513909, guid: a3dc7dd79a2fbc341a3fc828503f1ca9, type: 3}
       propertyPath: bulletPrefab
       value: 
@@ -22983,19 +23032,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4192718172865211736, guid: 4104fd1466bfc41479cbe307e37809c0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0085711
+      value: 1.4326754
       objectReference: {fileID: 0}
     - target: {fileID: 4192718172865211736, guid: 4104fd1466bfc41479cbe307e37809c0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.0380268
+      value: 1.5017134
       objectReference: {fileID: 0}
     - target: {fileID: 4192718172865211736, guid: 4104fd1466bfc41479cbe307e37809c0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 51.1317
+      value: 50.95
       objectReference: {fileID: 0}
     - target: {fileID: 4192718172865211736, guid: 4104fd1466bfc41479cbe307e37809c0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.1102
+      value: 9.71
       objectReference: {fileID: 0}
     - target: {fileID: 4192718172865211736, guid: 4104fd1466bfc41479cbe307e37809c0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -23039,7 +23088,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4192718172865211736, guid: 4104fd1466bfc41479cbe307e37809c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2051874840}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6301312099338231374, guid: 4104fd1466bfc41479cbe307e37809c0, type: 3}
       insertIndex: -1

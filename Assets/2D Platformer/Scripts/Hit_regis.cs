@@ -36,5 +36,10 @@ public class Hit_regis : MonoBehaviour
             bossHealth.TakeDamage(10);
             Destroy(transform.root.gameObject);
         }
+        if (collision.CompareTag("Player"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(transform.root.gameObject);
+        }
     }
 }
