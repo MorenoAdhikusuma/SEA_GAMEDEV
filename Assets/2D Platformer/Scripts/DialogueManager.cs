@@ -10,42 +10,48 @@ public class DialogueManager : MonoBehaviour
     [Header("Dialogue Settings")]
     public float typingSpeed = 0.02f;
 
-    [Header("References")]
-    public Animator animator;
+    [Header("UI")]
     public TMP_Text dialogueText;
+    public CanvasGroup dialogueGroup;
 
     private Queue<DialogueLine> dialogueQueue = new Queue<DialogueLine>();
     public bool isDialogueActive { get; private set; } = false;
 
     private void Awake()
     {
-        // Singleton
         if (instance == null)
-        {
             instance = this;
-        }
         else if (instance != this)
-        {
             Destroy(gameObject);
-        }
+    }
+
+    private void Start()
+    {
+        dialogueGroup.alpha = 0f; 
+    }
+
+    private void Update()
+    {
+    if (!isDialogueActive) return;
+
+    // Press E or Space to go to the next line
+    if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
+    {
+        DisplayNextDialogueLine();
+    }
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
-        if (dialogue == null || dialogue.dialogue == null)
-            return;
+        if (dialogue == null || dialogue.dialogue == null) return;
 
         isDialogueActive = true;
-
-        if (animator != null)
-            animator.Play("DialogueBox_Open");
+        dialogueGroup.alpha = 1f;  // <-- SHOW UI like your health bar
 
         dialogueQueue.Clear();
 
         foreach (DialogueLine line in dialogue.dialogue)
-        {
             dialogueQueue.Enqueue(line);
-        }
 
         DisplayNextDialogueLine();
     }
@@ -68,13 +74,10 @@ public class DialogueManager : MonoBehaviour
     {
         isDialogueActive = false;
 
-        if (animator != null)
-            animator.Play("DialogueBox_Close");
+        dialogueGroup.alpha = 0f; // <-- HIDE UI
 
         StopAllCoroutines();
-
-        if (dialogueText != null)
-            dialogueText.text = string.Empty;
+        dialogueText.text = "";
     }
 
     private IEnumerator TypeText(string text)
