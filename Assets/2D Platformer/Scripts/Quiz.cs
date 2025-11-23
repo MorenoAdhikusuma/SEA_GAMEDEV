@@ -22,8 +22,6 @@ public class Quiz : MonoBehaviour
                 // Set death state before destroying player
                 controller.deathState = true;
             }
-
-            Debug.Log("Player has died.");
         }
     }
 }
