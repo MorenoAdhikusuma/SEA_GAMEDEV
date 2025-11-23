@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -1890865580696766859}
   - component: {fileID: 1137833136485681980}
   m_Layer: 0
-  m_Name: Projectile
+  m_Name: Projectile 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -169,4 +169,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   bossHealth: {fileID: 0}
-  autoDestroyTime: 5
+  autoDestroyTime: 1

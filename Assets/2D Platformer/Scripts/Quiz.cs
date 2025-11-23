@@ -2,18 +2,28 @@ using UnityEngine;
 
 public class Quiz : MonoBehaviour
 {
-public AudioClip deathClip;
+    public AudioClip deathClip;
 
-public void die()
-{
-    // putar suara dulu
-    AudioSource.PlayClipAtPoint(deathClip, Camera.main.transform.position);
-    Destroy(GameObject.FindGameObjectWithTag("Player"));
+    public void die()
+    {
+        // Play death sound
+        AudioSource.PlayClipAtPoint(deathClip, Camera.main.transform.position);
 
-    // baru hancurkan player
-    GameObject player = GameObject.FindGameObjectWithTag("Player");
+        // Find player object
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        
+        if (player != null)
+        {
+            // Get PlayerController component
+            Platformer.PlayerController controller = player.GetComponent<Platformer.PlayerController>();
 
-    Debug.Log("Player has died.");
-}
+            if (controller != null)
+            {
+                // Set death state before destroying player
+                controller.deathState = true;
+            }
 
+            Debug.Log("Player has died.");
+        }
+    }
 }
