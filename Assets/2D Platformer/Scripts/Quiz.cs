@@ -12,7 +12,6 @@ public void die()
 
     // baru hancurkan player
     GameObject player = GameObject.FindGameObjectWithTag("Player");
-    Destroy(player);
 
     Debug.Log("Player has died.");
 }

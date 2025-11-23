@@ -45,6 +45,10 @@ public class DialogueTrigger : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
-            DialogueManager.instance.EndDialogue();
+        {
+            if (DialogueManager.instance != null && DialogueManager.instance.isDialogueActive)
+                DialogueManager.instance.EndDialogue();
+        }
     }
+
 }

@@ -17,6 +17,8 @@ public class DialogueManager : MonoBehaviour
     private Queue<DialogueLine> dialogueQueue = new Queue<DialogueLine>();
     public bool isDialogueActive { get; private set; } = false;
 
+    private bool isTyping = false;
+
     private void Awake()
     {
         if (instance == null)
@@ -27,18 +29,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        dialogueGroup.alpha = 0f; 
-    }
-
-    private void Update()
-    {
-    if (!isDialogueActive) return;
-
-    // Press E or Space to go to the next line
-    if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
-    {
-        DisplayNextDialogueLine();
-    }
+        dialogueGroup.alpha = 0f;
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -46,7 +37,7 @@ public class DialogueManager : MonoBehaviour
         if (dialogue == null || dialogue.dialogue == null) return;
 
         isDialogueActive = true;
-        dialogueGroup.alpha = 1f;  // <-- SHOW UI like your health bar
+        dialogueGroup.alpha = 1f;
 
         dialogueQueue.Clear();
 
@@ -56,7 +47,22 @@ public class DialogueManager : MonoBehaviour
         DisplayNextDialogueLine();
     }
 
-    public void DisplayNextDialogueLine()
+    // 🔹 FUNCTION YANG DIPANGGIL BUTTON
+    public void OnNextDialogue()
+    {
+        if (!isDialogueActive) return;
+
+        if (isTyping)
+        {
+            StopAllCoroutines();
+            isTyping = false;
+            return;
+        }
+
+        DisplayNextDialogueLine();
+    }
+
+    private void DisplayNextDialogueLine()
     {
         if (dialogueQueue.Count == 0)
         {
@@ -73,8 +79,7 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         isDialogueActive = false;
-
-        dialogueGroup.alpha = 0f; // <-- HIDE UI
+        dialogueGroup.alpha = 0f;
 
         StopAllCoroutines();
         dialogueText.text = "";
@@ -82,6 +87,7 @@ public class DialogueManager : MonoBehaviour
 
     private IEnumerator TypeText(string text)
     {
+        isTyping = true;
         dialogueText.text = "";
 
         foreach (char letter in text)
@@ -89,5 +95,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return new WaitForSeconds(typingSpeed);
         }
+
+        isTyping = false;
     }
 }
