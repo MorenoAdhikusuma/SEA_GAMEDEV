@@ -20,14 +20,17 @@ namespace Platformer
         private Rigidbody2D rigidbody;
         private Animator animator;
         private GameManager gameManager;
-       
 
-         public Transform firePoint;      // Gun muzzle or spawn point
-    public GameObject bulletPrefab;  // Your bullet prefab
-    public float bulletSpeed = 10f;
-    public float fireRate = 0.5f;      
-    private float nextFireTime = 0f;
+        public AudioSource jump;
+        public AudioSource death;
 
+        public Transform firePoint;
+        public GameObject bulletPrefab;
+        public float bulletSpeed = 10f;
+        public float fireRate = 0.5f;
+        private float nextFireTime = 0f;
+
+        bool jumpPressed = false;
 
         void Start()
         {
@@ -39,35 +42,39 @@ namespace Platformer
         private void FixedUpdate()
         {
             CheckGround();
+
+            if (jumpPressed && isGrounded)
+            {
+                rigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                jump.Play();
+                jumpPressed = false;
+            }
         }
 
         void Update()
         {
-            if (Input.GetButton("Horizontal")) 
+            if (Input.GetButton("Horizontal"))
             {
                 moveInput = Input.GetAxis("Horizontal");
                 Vector3 direction = transform.right * moveInput;
                 transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, movingSpeed * Time.deltaTime);
-                animator.SetInteger("playerState", 1); // Turn on run animation
+                animator.SetInteger("playerState", 1);
             }
             else
             {
-                if (isGrounded) animator.SetInteger("playerState", 0); // Turn on idle animation
+                if (isGrounded) animator.SetInteger("playerState", 0);
             }
-            if(Input.GetKeyDown(KeyCode.Space) && isGrounded )
-            {
-                rigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-            }
-            if (!isGrounded)animator.SetInteger("playerState", 2); // Turn on jump animation
 
-            if(facingRight == false && moveInput > 0)
-            {
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+                jumpPressed = true;
+
+            if (!isGrounded) animator.SetInteger("playerState", 2);
+
+            if (!facingRight && moveInput > 0)
                 Flip();
-            }
-            else if(facingRight == true && moveInput < 0)
-            {
+            else if (facingRight && moveInput < 0)
                 Flip();
-            }   
+
             if (Input.GetMouseButtonDown(0) && Time.time >= nextFireTime)
             {
                 ProjectileShoot();
@@ -91,13 +98,12 @@ namespace Platformer
 
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.tag == "Enemy")
+            if (other.gameObject.tag == "Enemy" && deathState == false)
             {
-                deathState = true; // Say to GameManager that player is dead
-            }
-            else
-            {
-                deathState = false;
+                deathState = true;
+                death.Play();
+                // contoh jika ingin mati setelah suara selesai
+                // Destroy(gameObject, death.clip.length);
             }
         }
 
@@ -119,8 +125,5 @@ namespace Platformer
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
             rb.linearVelocity = direction * bulletSpeed;
         }
-
-            }
-        }
-
-
+    }
+}

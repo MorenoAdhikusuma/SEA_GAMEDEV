@@ -14,6 +14,9 @@ namespace Platformer
         public GameObject deathPlayerPrefab;
         public Text coinText;
 
+        public AudioClip deathClip;
+        public AudioSource audioSource;
+
         void Start()
         {
             player = GameObject.Find("Player").GetComponent<PlayerController>();
@@ -22,14 +25,28 @@ namespace Platformer
         void Update()
         {
             coinText.text = coinsCounter.ToString();
-            if(player.deathState == true)
+
+            if (player.deathState == true)
             {
-                playerGameObject.SetActive(false);
-                GameObject deathPlayer = (GameObject)Instantiate(deathPlayerPrefab, playerGameObject.transform.position, playerGameObject.transform.rotation);
-                deathPlayer.transform.localScale = new Vector3(playerGameObject.transform.localScale.x, playerGameObject.transform.localScale.y, playerGameObject.transform.localScale.z);
+                StartCoroutine(DeathProcess());
                 player.deathState = false;
-                Invoke("ReloadLevel", 3);
             }
+        }
+
+        IEnumerator DeathProcess()
+        {
+            // Mainkan suara death dulu (agar tidak terputus)
+            audioSource.PlayOneShot(deathClip);
+
+            yield return new WaitForSeconds(0.05f); // beri waktu 1 frame agar suara mulai
+
+            playerGameObject.SetActive(false);
+
+            GameObject deathPlayer = Instantiate(deathPlayerPrefab, playerGameObject.transform.position, playerGameObject.transform.rotation);
+            deathPlayer.transform.localScale = playerGameObject.transform.localScale;
+
+            yield return new WaitForSeconds(3);
+            ReloadLevel();
         }
 
         private void ReloadLevel()
