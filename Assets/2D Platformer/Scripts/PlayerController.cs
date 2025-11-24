@@ -41,6 +41,9 @@ namespace Platformer
 
         private void FixedUpdate()
         {
+            if(DialogueManager.instance != null && DialogueManager.instance.isDialogueActive)
+            return;
+
             CheckGround();
 
             if (jumpPressed && isGrounded)
@@ -53,6 +56,14 @@ namespace Platformer
 
         void Update()
         {
+
+            if(DialogueManager.instance != null && DialogueManager.instance.isDialogueActive)
+            {
+                moveInput = 0;
+                animator.SetInteger("PlayerState", 0);
+                return;
+            }
+
             if (Input.GetButton("Horizontal"))
             {
                 moveInput = Input.GetAxis("Horizontal");
@@ -80,6 +91,7 @@ namespace Platformer
                 ProjectileShoot();
                 nextFireTime = Time.time + fireRate;
             }
+            
         }
 
         private void Flip()
