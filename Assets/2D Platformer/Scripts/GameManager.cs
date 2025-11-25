@@ -14,8 +14,8 @@ namespace Platformer
         public GameObject deathPlayerPrefab;
         public Text coinText;
 
-        public AudioClip deathClip;
-        public AudioSource audioSource;
+        // public AudioClip deathClip;
+        // public AudioSource audioSource;
 
         void Start()
         {
@@ -36,9 +36,9 @@ namespace Platformer
         IEnumerator DeathProcess()
         {
             // Mainkan suara death dulu (agar tidak terputus)
-            audioSource.PlayOneShot(deathClip);
+            // audioSource.PlayOneShot(deathClip);
 
-            yield return new WaitForSeconds(0.05f); // beri waktu 1 frame agar suara mulai
+            yield return new WaitForSeconds(0.05f); // ini ngeplay yang mana bjir
 
             playerGameObject.SetActive(false);
 
