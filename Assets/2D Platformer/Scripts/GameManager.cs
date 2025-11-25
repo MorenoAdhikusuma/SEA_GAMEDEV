@@ -1,12 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Platformer
 {
     public class GameManager : MonoBehaviour
     {
+        private static GameManager instance;
+
         public int coinsCounter = 0;
 
         public GameObject playerGameObject;
@@ -14,19 +16,42 @@ namespace Platformer
         public GameObject deathPlayerPrefab;
         public Text coinText;
 
-        // public AudioClip deathClip;
-        // public AudioSource audioSource;
+        void Awake()
+        {
+            if (instance != null && instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
 
         void Start()
         {
-            player = GameObject.Find("Player").GetComponent<PlayerController>();
+            ReconnectPlayer();
+        }
+
+        void OnLevelWasLoaded(int level)
+        {
+            ReconnectPlayer();
+        }
+
+        void ReconnectPlayer()
+        {
+            player = FindObjectOfType<PlayerController>();
+
+            if (player != null)
+                playerGameObject = player.gameObject;
         }
 
         void Update()
         {
-            coinText.text = coinsCounter.ToString();
+            if (coinText != null)
+                coinText.text = coinsCounter.ToString();
 
-            if (player.deathState == true)
+            if (player != null && player.deathState == true)
             {
                 StartCoroutine(DeathProcess());
                 player.deathState = false;
@@ -35,23 +60,27 @@ namespace Platformer
 
         IEnumerator DeathProcess()
         {
-            // Mainkan suara death dulu (agar tidak terputus)
-            // audioSource.PlayOneShot(deathClip);
+            yield return new WaitForSeconds(0.05f);
 
-            yield return new WaitForSeconds(0.05f); // ini ngeplay yang mana bjir
+            if (playerGameObject != null)
+                playerGameObject.SetActive(false);
 
-            playerGameObject.SetActive(false);
+            GameObject deathPlayer = Instantiate(
+                deathPlayerPrefab,
+                playerGameObject.transform.position,
+                playerGameObject.transform.rotation
+            );
 
-            GameObject deathPlayer = Instantiate(deathPlayerPrefab, playerGameObject.transform.position, playerGameObject.transform.rotation);
             deathPlayer.transform.localScale = playerGameObject.transform.localScale;
 
             yield return new WaitForSeconds(3);
+
             ReloadLevel();
         }
 
         private void ReloadLevel()
         {
-            Application.LoadLevel(Application.loadedLevel);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 }
