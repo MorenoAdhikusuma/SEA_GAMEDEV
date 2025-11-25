@@ -11,7 +11,6 @@ namespace Platformer
         public float movingSpeed;
         public float jumpForce;
         private float moveInput;
-
         private bool facingRight = false;
         [HideInInspector]
         public bool deathState = false;
@@ -33,9 +32,6 @@ namespace Platformer
         private float nextFireTime = 0f;
 
         bool jumpPressed = false;
-
-
-        // ---------- PERSISTENT PLAYER ----------
         void Awake()
         {
             if (instance != null && instance != this)
@@ -47,17 +43,14 @@ namespace Platformer
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-
-
         void Start()
         {
             rigidbody = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
             gameManager = FindObjectOfType<GameManager>();
 
-            MoveToSpawn();
+            MoveToSpawn(); // ensure correct position on scene start
         }
-
         private void FixedUpdate()
         {
             if (DialogueManager.instance != null && DialogueManager.instance.isDialogueActive)
@@ -72,7 +65,6 @@ namespace Platformer
                 jumpPressed = false;
             }
         }
-
         void Update()
         {
             if (DialogueManager.instance != null && DialogueManager.instance.isDialogueActive)
@@ -87,6 +79,7 @@ namespace Platformer
             {
                 moveInput = Input.GetAxis("Horizontal");
                 Vector3 direction = transform.right * moveInput;
+
                 transform.position = Vector3.MoveTowards(
                     transform.position,
                     transform.position + direction,
@@ -97,7 +90,8 @@ namespace Platformer
             }
             else
             {
-                if (isGrounded) animator.SetInteger("playerState", 0);
+                if (isGrounded)
+                    animator.SetInteger("playerState", 0);
             }
 
             // JUMP
@@ -107,7 +101,7 @@ namespace Platformer
             if (!isGrounded)
                 animator.SetInteger("playerState", 2);
 
-            // FLIP SPRITE
+            // FLIP
             if (!facingRight && moveInput > 0)
                 Flip();
             else if (facingRight && moveInput < 0)
@@ -120,8 +114,6 @@ namespace Platformer
                 nextFireTime = Time.time + fireRate;
             }
         }
-
-
         private void Flip()
         {
             facingRight = !facingRight;
@@ -129,8 +121,6 @@ namespace Platformer
             scaler.x *= -1;
             transform.localScale = scaler;
         }
-
-
         private void CheckGround()
         {
             Collider2D[] colliders = Physics2D.OverlapCircleAll(
@@ -140,8 +130,6 @@ namespace Platformer
 
             isGrounded = colliders.Length > 1;
         }
-
-
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (other.gameObject.tag == "Enemy" && deathState == false)
@@ -159,8 +147,6 @@ namespace Platformer
                 Destroy(other.gameObject);
             }
         }
-
-
         private void ProjectileShoot()
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -174,18 +160,12 @@ namespace Platformer
             rb.linearVelocity = direction * bulletSpeed;
         }
 
-
-
-        // ---------------------------------------------------------
-        //                SPAWN POINT SYSTEM
-        // ---------------------------------------------------------
-
         void OnLevelWasLoaded(int level)
         {
             MoveToSpawn();
         }
 
-        void MoveToSpawn()
+        public void MoveToSpawn()
         {
             string spawnID = PlayerPrefs.GetString("SpawnID", "");
 
