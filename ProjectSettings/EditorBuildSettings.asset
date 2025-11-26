@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/2D Platformer/Scenes/Main menu/Menu.unity
+    guid: 62989a3affba4b941b48443f70ecf0a0
+  - enabled: 1
     path: Assets/2D Platformer/Scenes/Demo.unity
     guid: d87f4203f2c419645ae9ea97bae08a47
   - enabled: 1
@@ -18,8 +21,8 @@ EditorBuildSettings:
     path: Assets/2D Platformer/Scenes/stage/RestArea.unity
     guid: 9affb79434008664b9f833495ab6bf1e
   - enabled: 1
-    path: Assets/2D Platformer/Scenes/Main menu/Menu.unity
-    guid: 62989a3affba4b941b48443f70ecf0a0
+    path: Assets/2D Platformer/Scenes/stage/Stage3.unity
+    guid: 10b25a5c33d85864682ca00ce35c82e1
   - enabled: 1
     path: Assets/2D Platformer/Scenes/Demo.unity
     guid: d87f4203f2c419645ae9ea97bae08a47
