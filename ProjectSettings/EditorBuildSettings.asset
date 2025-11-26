@@ -17,6 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/2D Platformer/Scenes/stage/RestArea.unity
     guid: 9affb79434008664b9f833495ab6bf1e
+  - enabled: 1
+    path: Assets/2D Platformer/Scenes/Main menu/Menu.unity
+    guid: 62989a3affba4b941b48443f70ecf0a0
+  - enabled: 1
+    path: Assets/2D Platformer/Scenes/Demo.unity
+    guid: d87f4203f2c419645ae9ea97bae08a47
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
