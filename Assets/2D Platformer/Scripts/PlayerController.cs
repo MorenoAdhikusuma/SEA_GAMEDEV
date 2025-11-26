@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Platformer
 {
@@ -165,23 +166,32 @@ namespace Platformer
             MoveToSpawn();
         }
 
-        public void MoveToSpawn()
+       public void MoveToSpawn()
+{
+    string spawnID = PlayerPrefs.GetString("SpawnID", "");
+    string currentScene = SceneManager.GetActiveScene().name;
+
+    SpawnPoint[] points = FindObjectsOfType<SpawnPoint>();
+
+    foreach (SpawnPoint p in points)
+    {
+        if (p.spawnID == spawnID && p.SceneName == currentScene)
         {
-            string spawnID = PlayerPrefs.GetString("SpawnID", "");
-
-            if (spawnID == "")
-                return;
-
-            SpawnPoint[] points = FindObjectsOfType<SpawnPoint>();
-
-            foreach (SpawnPoint p in points)
-            {
-                if (p.spawnID == spawnID)
-                {
-                    transform.position = p.transform.position;
-                    break;
-                }
-            }
+            transform.position = p.transform.position;
+            return;
         }
+    }
+
+    // Fallback: use any spawn from this scene
+    foreach (SpawnPoint p in points)
+    {
+        if (p.SceneName == currentScene)
+        {
+            transform.position = p.transform.position;
+            return;
+        }
+    }
+}
+
     }
 }

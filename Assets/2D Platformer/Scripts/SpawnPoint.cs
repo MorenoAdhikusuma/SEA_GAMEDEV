@@ -3,6 +3,7 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour
 {
     public string spawnID;  // ID unik untuk spawn point
+    public string SceneName;
 
         private void OnDrawGizmos()
         {

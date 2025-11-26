@@ -2,7 +2,10 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-
+//DIS IS DA MAGIC THAT MAKES DA GAME WORK
+//IDK HOW BUT IT DOES, DONT TOUCH IT PLEASE
+//IF YOU BREAK IT I WILL FIND YOU
+//- LEMON
 namespace Platformer
 {
     public class GameManager : MonoBehaviour
@@ -18,9 +21,6 @@ namespace Platformer
 
         private bool isRespawning = false;
 
-        // ---------------------------------------------
-        //           SINGLETON + PERSISTENT
-        // ---------------------------------------------
         void Awake()
         {
             if (instance != null && instance != this)
@@ -51,9 +51,6 @@ namespace Platformer
                 playerGameObject = player.gameObject;
         }
 
-        // ---------------------------------------------
-        //                UPDATE LOOP
-        // ---------------------------------------------
         void Update()
         {
             if (coinText != null)
@@ -98,6 +95,7 @@ namespace Platformer
             Debug.Log("Respawning Player...");
 
             RespawnPlayer();
+            player.MoveToSpawn();
 
             isRespawning = false;
         }
@@ -120,11 +118,6 @@ namespace Platformer
             if (sr != null)
                 sr.enabled = false;
 
-            // Disable collider
-            Collider2D col = playerGameObject.GetComponent<Collider2D>();
-            if (col != null)
-                col.enabled = false;
-
             // Reset velocity
             Rigidbody2D rb = playerGameObject.GetComponent<Rigidbody2D>();
             if (rb != null)
@@ -139,17 +132,9 @@ namespace Platformer
             if (player == null)
                 player = FindObjectOfType<PlayerController>();
 
-            if (player == null)
-            {
-                Debug.LogError("GameManager: NO PLAYER FOUND TO RESPAWN!");
-                return;
-            }
-
-            // Move player to spawn point
-            player.MoveToSpawn();
-
             // Re-enable everything
             EnablePlayerComponents();
+
         }
 
         // ---------------------------------------------
