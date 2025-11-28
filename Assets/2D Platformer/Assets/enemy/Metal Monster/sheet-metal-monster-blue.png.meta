@@ -1,0 +1,3055 @@
+fileFormatVersion: 2
+guid: 0c3c745155a595043bde5660f892895c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7296521159537100608
+    second: sheet-metal-monster-blue_0
+  - first:
+      213: 7319007628467183333
+    second: sheet-metal-monster-blue_1
+  - first:
+      213: 6540547662715876947
+    second: sheet-metal-monster-blue_2
+  - first:
+      213: -5380572792328080796
+    second: sheet-metal-monster-blue_3
+  - first:
+      213: -8944009519393860819
+    second: sheet-metal-monster-blue_4
+  - first:
+      213: 2433221701573544539
+    second: sheet-metal-monster-blue_5
+  - first:
+      213: 3355985373800977328
+    second: sheet-metal-monster-blue_6
+  - first:
+      213: -1190909015963076925
+    second: sheet-metal-monster-blue_7
+  - first:
+      213: -8522109532593400056
+    second: sheet-metal-monster-blue_8
+  - first:
+      213: 6309459693039538908
+    second: sheet-metal-monster-blue_9
+  - first:
+      213: 2143048123686453482
+    second: sheet-metal-monster-blue_10
+  - first:
+      213: -3858883855768755580
+    second: sheet-metal-monster-blue_11
+  - first:
+      213: -3215575957887927361
+    second: sheet-metal-monster-blue_12
+  - first:
+      213: -2104719296242322687
+    second: sheet-metal-monster-blue_13
+  - first:
+      213: 6214213062710013474
+    second: sheet-metal-monster-blue_14
+  - first:
+      213: -2565378721912966781
+    second: sheet-metal-monster-blue_15
+  - first:
+      213: -7115811428427548236
+    second: sheet-metal-monster-blue_16
+  - first:
+      213: 2584841307620404342
+    second: sheet-metal-monster-blue_17
+  - first:
+      213: -5291562641565385426
+    second: sheet-metal-monster-blue_18
+  - first:
+      213: -3097391352713328944
+    second: sheet-metal-monster-blue_19
+  - first:
+      213: 7194985360871746315
+    second: sheet-metal-monster-blue_20
+  - first:
+      213: -9091038331786176904
+    second: sheet-metal-monster-blue_21
+  - first:
+      213: 4968610494238392399
+    second: sheet-metal-monster-blue_22
+  - first:
+      213: -7859988909701827846
+    second: sheet-metal-monster-blue_23
+  - first:
+      213: -7695868237981829497
+    second: sheet-metal-monster-blue_24
+  - first:
+      213: 2540269998652606350
+    second: sheet-metal-monster-blue_25
+  - first:
+      213: -7407511336905040908
+    second: sheet-metal-monster-blue_26
+  - first:
+      213: 8914899148218134869
+    second: sheet-metal-monster-blue_27
+  - first:
+      213: -6860575095507282882
+    second: sheet-metal-monster-blue_28
+  - first:
+      213: 4352214214029934790
+    second: sheet-metal-monster-blue_29
+  - first:
+      213: 2862257845158759299
+    second: sheet-metal-monster-blue_30
+  - first:
+      213: 6384924257927415114
+    second: sheet-metal-monster-blue_31
+  - first:
+      213: 4873876001659934744
+    second: sheet-metal-monster-blue_32
+  - first:
+      213: -4410532721931615910
+    second: sheet-metal-monster-blue_33
+  - first:
+      213: 1915963342943140488
+    second: sheet-metal-monster-blue_34
+  - first:
+      213: -5299706812758437236
+    second: sheet-metal-monster-blue_35
+  - first:
+      213: 545877180768855208
+    second: sheet-metal-monster-blue_36
+  - first:
+      213: 9128351000430338810
+    second: sheet-metal-monster-blue_37
+  - first:
+      213: -1245065621777263482
+    second: sheet-metal-monster-blue_38
+  - first:
+      213: -1267527256693446716
+    second: sheet-metal-monster-blue_39
+  - first:
+      213: 8080512071396944827
+    second: sheet-metal-monster-blue_40
+  - first:
+      213: 5461265197557593221
+    second: sheet-metal-monster-blue_41
+  - first:
+      213: -6171735380486751885
+    second: sheet-metal-monster-blue_42
+  - first:
+      213: -1253515642807053367
+    second: sheet-metal-monster-blue_43
+  - first:
+      213: -2689922328497252288
+    second: sheet-metal-monster-blue_44
+  - first:
+      213: 3558264245749537538
+    second: sheet-metal-monster-blue_45
+  - first:
+      213: -4621685359300425124
+    second: sheet-metal-monster-blue_46
+  - first:
+      213: 6019468940872000067
+    second: sheet-metal-monster-blue_47
+  - first:
+      213: 6735653267556411418
+    second: sheet-metal-monster-blue_48
+  - first:
+      213: 3656917648686603452
+    second: sheet-metal-monster-blue_49
+  - first:
+      213: 4309948010860957650
+    second: sheet-metal-monster-blue_50
+  - first:
+      213: -3914355532216969547
+    second: sheet-metal-monster-blue_51
+  - first:
+      213: -4245401319346503057
+    second: sheet-metal-monster-blue_52
+  - first:
+      213: -1978465334689605083
+    second: sheet-metal-monster-blue_53
+  - first:
+      213: -8105106777778802389
+    second: sheet-metal-monster-blue_54
+  - first:
+      213: -7988092218425871179
+    second: sheet-metal-monster-blue_55
+  - first:
+      213: 5628131756113041003
+    second: sheet-metal-monster-blue_56
+  - first:
+      213: -5907988151733708604
+    second: sheet-metal-monster-blue_57
+  - first:
+      213: 9009884138219290857
+    second: sheet-metal-monster-blue_58
+  - first:
+      213: 8377722891941947401
+    second: sheet-metal-monster-blue_59
+  - first:
+      213: 3508197959194646402
+    second: sheet-metal-monster-blue_60
+  - first:
+      213: -6154861489799381712
+    second: sheet-metal-monster-blue_61
+  - first:
+      213: 4493382290025092999
+    second: sheet-metal-monster-blue_62
+  - first:
+      213: -2573470139750246498
+    second: sheet-metal-monster-blue_63
+  - first:
+      213: -5636982324924510936
+    second: sheet-metal-monster-blue_64
+  - first:
+      213: 763252401454469741
+    second: sheet-metal-monster-blue_65
+  - first:
+      213: -8034625950310300606
+    second: sheet-metal-monster-blue_66
+  - first:
+      213: 1592360033107382348
+    second: sheet-metal-monster-blue_67
+  - first:
+      213: -2293763256893702230
+    second: sheet-metal-monster-blue_68
+  - first:
+      213: -4624435653137700445
+    second: sheet-metal-monster-blue_69
+  - first:
+      213: 7347585914875722427
+    second: sheet-metal-monster-blue_70
+  - first:
+      213: -5356781790215367673
+    second: sheet-metal-monster-blue_71
+  - first:
+      213: -665570224891695341
+    second: sheet-metal-monster-blue_72
+  - first:
+      213: -4837926059809145930
+    second: sheet-metal-monster-blue_73
+  - first:
+      213: 1113855959148158816
+    second: sheet-metal-monster-blue_74
+  - first:
+      213: 6528379944554215800
+    second: sheet-metal-monster-blue_75
+  - first:
+      213: -5718095330257600864
+    second: sheet-metal-monster-blue_76
+  - first:
+      213: -2920236335966909688
+    second: sheet-metal-monster-blue_77
+  - first:
+      213: 1848345303553679670
+    second: sheet-metal-monster-blue_78
+  - first:
+      213: 5958683158173951255
+    second: sheet-metal-monster-blue_79
+  - first:
+      213: -8788793192965237469
+    second: sheet-metal-monster-blue_80
+  - first:
+      213: -3579410453430894385
+    second: sheet-metal-monster-blue_81
+  - first:
+      213: 5780751422859668731
+    second: sheet-metal-monster-blue_82
+  - first:
+      213: 659685357461308882
+    second: sheet-metal-monster-blue_83
+  - first:
+      213: -3732466076295630637
+    second: sheet-metal-monster-blue_84
+  - first:
+      213: 4373906556744393236
+    second: sheet-metal-monster-blue_85
+  - first:
+      213: 4832784873551814537
+    second: sheet-metal-monster-blue_86
+  - first:
+      213: -5928285080127627727
+    second: sheet-metal-monster-blue_87
+  - first:
+      213: -2206401654088736011
+    second: sheet-metal-monster-blue_88
+  - first:
+      213: 67788883196916038
+    second: sheet-metal-monster-blue_89
+  - first:
+      213: 232224467913090413
+    second: sheet-metal-monster-blue_90
+  - first:
+      213: -864803187077891662
+    second: sheet-metal-monster-blue_91
+  - first:
+      213: -511827494029816885
+    second: sheet-metal-monster-blue_92
+  - first:
+      213: 5454035037784780037
+    second: sheet-metal-monster-blue_93
+  - first:
+      213: -8221688893761748601
+    second: sheet-metal-monster-blue_94
+  - first:
+      213: -8850285734440741299
+    second: sheet-metal-monster-blue_95
+  - first:
+      213: -4209615106730146785
+    second: sheet-metal-monster-blue_96
+  - first:
+      213: 3881315838546891714
+    second: sheet-metal-monster-blue_97
+  - first:
+      213: 7326928250356410585
+    second: sheet-metal-monster-blue_98
+  - first:
+      213: -4783604938983462021
+    second: sheet-metal-monster-blue_99
+  - first:
+      213: 6437088784748577814
+    second: sheet-metal-monster-blue_100
+  - first:
+      213: 8008324220245858465
+    second: sheet-metal-monster-blue_101
+  - first:
+      213: 2205699909284642984
+    second: sheet-metal-monster-blue_102
+  - first:
+      213: -726363302042195526
+    second: sheet-metal-monster-blue_103
+  - first:
+      213: -1238487077096147871
+    second: sheet-metal-monster-blue_104
+  - first:
+      213: 236866372944206046
+    second: sheet-metal-monster-blue_105
+  - first:
+      213: -7303246636602624725
+    second: sheet-metal-monster-blue_106
+  - first:
+      213: 739420176767077149
+    second: sheet-metal-monster-blue_107
+  - first:
+      213: 6739584059162429099
+    second: sheet-metal-monster-blue_108
+  - first:
+      213: -6148647759090559526
+    second: sheet-metal-monster-blue_109
+  - first:
+      213: 6494290291186184932
+    second: sheet-metal-monster-blue_110
+  - first:
+      213: -3943108375394929902
+    second: sheet-metal-monster-blue_111
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 406
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c87badf9ac8dba90800000000000000
+      internalID: -7296521159537100608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 407
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee192b09a6529560800000000000000
+      internalID: 7319007628467183333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 408
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356f0b82271b4ca50800000000000000
+      internalID: 6540547662715876947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_3
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 409
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46237298d8d5455b0800000000000000
+      internalID: -5380572792328080796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_4
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 410
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2311d0cabe70e380800000000000000
+      internalID: -8944009519393860819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_5
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 410
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a001eee3a84c120800000000000000
+      internalID: 2433221701573544539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_6
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 406
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b350dcaaead29e20800000000000000
+      internalID: 3355985373800977328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_7
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 405
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c6f5b74f8a097fe0800000000000000
+      internalID: -1190909015963076925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 349
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 807dccc38826bb980800000000000000
+      internalID: -8522109532593400056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_9
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 349
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd254407924bf8750800000000000000
+      internalID: 6309459693039538908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_10
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 350
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae006e40ae2adbd10800000000000000
+      internalID: 2143048123686453482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_11
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 351
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482e963149d727ac0800000000000000
+      internalID: -3858883855768755580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_12
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 352
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbbbdc104baff53d0800000000000000
+      internalID: -3215575957887927361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_13
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 351
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103f09b83f88ac2e0800000000000000
+      internalID: -2104719296242322687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_14
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 350
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e2c613bd15d3650800000000000000
+      internalID: 6214213062710013474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_15
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 295
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3813806f4a1f56cd0800000000000000
+      internalID: -2565378721912966781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_16
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 297
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b939eff43f8f3d90800000000000000
+      internalID: -7115811428427548236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_17
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 297
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c687569733fd320800000000000000
+      internalID: 2584841307620404342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_18
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 297
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d74ca30d79096b0800000000000000
+      internalID: -5291562641565385426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_19
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 295
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d6c723b9fad305d0800000000000000
+      internalID: -3097391352713328944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_20
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 297
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0b65e6a019b9d360800000000000000
+      internalID: 7194985360871746315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_21
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 295
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 876dc6abdc426d180800000000000000
+      internalID: -9091038331786176904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_22
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 293
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f408b507bec04f440800000000000000
+      internalID: 4968610494238392399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_23
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 297
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af276ba0bb5bbe290800000000000000
+      internalID: -7859988909701827846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_24
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 297
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 786b1ecac98c23590800000000000000
+      internalID: -7695868237981829497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_25
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 297
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e874547da1ad04320800000000000000
+      internalID: 2540269998652606350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_26
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 297
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fb981e8fab333990800000000000000
+      internalID: -7407511336905040908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_27
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 295
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55179f9ca8518bb70800000000000000
+      internalID: 8914899148218134869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_28
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 238
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e34956dac475ac0a0800000000000000
+      internalID: -6860575095507282882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_29
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 237
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c009a5c4cb266c30800000000000000
+      internalID: 4352214214029934790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_30
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 238
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b43446858c8b720800000000000000
+      internalID: 2862257845158759299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_31
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 257
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a45c987a8cecb9850800000000000000
+      internalID: 6384924257927415114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_32
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 237
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 818dd3e866c73a340800000000000000
+      internalID: 4873876001659934744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_33
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 237
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a51870f7bd3aac2c0800000000000000
+      internalID: -4410532721931615910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_34
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 252
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88abbca528ed69a10800000000000000
+      internalID: 1915963342943140488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_35
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 252
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c82d0db9bb8a376b0800000000000000
+      internalID: -5299706812758437236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_36
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 250
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a428ba5768539700800000000000000
+      internalID: 545877180768855208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_37
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 238
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af26bbdeeda6eae70800000000000000
+      internalID: 9128351000430338810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_38
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 241
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6845ae3e963a8bee0800000000000000
+      internalID: -1245065621777263482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_39
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 237
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c769a9fca6d86ee0800000000000000
+      internalID: -1267527256693446716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_40
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 237
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbbeed2aaeeb32070800000000000000
+      internalID: 8080512071396944827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_41
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 238
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 584bf9c13cf4acb40800000000000000
+      internalID: 5461265197557593221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_42
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 237
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3797066ee57995aa0800000000000000
+      internalID: -6171735380486751885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_43
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 243
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c3171e0a2e9a9ee0800000000000000
+      internalID: -1253515642807053367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_44
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 232
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0489780e4e97baad0800000000000000
+      internalID: -2689922328497252288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_45
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 231
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20bdfd0aa7e716130800000000000000
+      internalID: 3558264245749537538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_46
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 230
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a464707a97cdfb0800000000000000
+      internalID: -4621685359300425124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_47
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 232
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3422c25fb13798350800000000000000
+      internalID: 6019468940872000067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_48
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 230
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1826e6b5f8d97d50800000000000000
+      internalID: 6735653267556411418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_49
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 237
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbc52dee93bffb230800000000000000
+      internalID: 3656917648686603452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_50
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 232
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dfc4cb71e200db30800000000000000
+      internalID: 4309948010860957650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_51
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 229
+        width: 27
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b65f91f16a6da9c0800000000000000
+      internalID: -3914355532216969547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_52
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 238
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f62806f3efd4515c0800000000000000
+      internalID: -4245401319346503057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_53
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 232
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ad66da2441b84e0800000000000000
+      internalID: -1978465334689605083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_54
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 229
+        width: 27
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2132eb0450e48f80800000000000000
+      internalID: -8105106777778802389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_55
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 236
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b4f9a73378942190800000000000000
+      internalID: -7988092218425871179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_56
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 182
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b66963853042b1e40800000000000000
+      internalID: 5628131756113041003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_57
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 183
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c812bee31c920ea0800000000000000
+      internalID: -5907988151733708604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_58
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 184
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e0ccf523e9890d70800000000000000
+      internalID: 9009884138219290857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_59
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 185
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 908abd84596a34470800000000000000
+      internalID: 8377722891941947401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_60
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 186
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2871c87e47f9fa030800000000000000
+      internalID: 3508197959194646402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_61
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 186
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03db6cab51a859aa0800000000000000
+      internalID: -6154861489799381712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_62
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 182
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7871af4c263bb5e30800000000000000
+      internalID: 4493382290025092999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_63
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 181
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e979c10fa82394cd0800000000000000
+      internalID: -2573470139750246498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_64
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 125
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82d08b5017a65c1b0800000000000000
+      internalID: -5636982324924510936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_65
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 125
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6258a6e30e979a00800000000000000
+      internalID: 763252401454469741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_66
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 126
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2448e9874464f7090800000000000000
+      internalID: -8034625950310300606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_67
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 127
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4015ef6303391610800000000000000
+      internalID: 1592360033107382348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_68
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 128
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaff102887aea20e0800000000000000
+      internalID: -2293763256893702230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_69
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 127
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a963185644b2dfb0800000000000000
+      internalID: -4624435653137700445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_70
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 126
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbab4dcd57ed7f560800000000000000
+      internalID: 7347585914875722427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_71
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 71
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7049eeed753e8a5b0800000000000000
+      internalID: -5356781790215367673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_72
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 73
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31fe044286b63c6f0800000000000000
+      internalID: -665570224891695341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_73
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 73
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bb787b81eb3cdcb0800000000000000
+      internalID: -4837926059809145930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_74
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 73
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06f5af7e716357f00800000000000000
+      internalID: 1113855959148158816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_75
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 71
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87930f188f6799a50800000000000000
+      internalID: 6528379944554215800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_76
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 73
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aefc28c79e35a0b0800000000000000
+      internalID: -5718095330257600864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_77
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 71
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80b0186468c3977d0800000000000000
+      internalID: -2920236335966909688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_78
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 69
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6312498b244a6a910800000000000000
+      internalID: 1848345303553679670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_79
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 73
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 715af0c03ce71b250800000000000000
+      internalID: 5958683158173951255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_80
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 73
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3259fe0f72fe70680800000000000000
+      internalID: -8788793192965237469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_81
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 73
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc08ee93821635ec0800000000000000
+      internalID: -3579410453430894385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_82
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 73
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfc62669aca593050800000000000000
+      internalID: 5780751422859668731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_83
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 71
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d50203665ca72900800000000000000
+      internalID: 659685357461308882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_84
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 14
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d0f33a01ed933cc0800000000000000
+      internalID: -3732466076295630637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_85
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 13
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4126083e6dc33bc30800000000000000
+      internalID: 4373906556744393236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_86
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 14
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98fdfefbc30811340800000000000000
+      internalID: 4832784873551814537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_87
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 33
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13e9eb701208abda0800000000000000
+      internalID: -5928285080127627727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_88
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 13
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2e438b2694161e0800000000000000
+      internalID: -2206401654088736011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_89
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 13
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6413cae41a5d0f000800000000000000
+      internalID: 67788883196916038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_90
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 28
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d652d165ce6093300800000000000000
+      internalID: 232224467913090413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_91
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 28
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9b891551a9ff3f0800000000000000
+      internalID: -864803187077891662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_92
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 26
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcb03102b9f95e8f0800000000000000
+      internalID: -511827494029816885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_93
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 14
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d22bb58ff90bb40800000000000000
+      internalID: 5454035037784780037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_94
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 17
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7818e81f281b6ed80800000000000000
+      internalID: -8221688893761748601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_95
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 13
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d46d3fde3087d2580800000000000000
+      internalID: -8850285734440741299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_96
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 13
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f144b3a2d517495c0800000000000000
+      internalID: -4209615106730146785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_97
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 14
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c35fa9e0343dd530800000000000000
+      internalID: 3881315838546891714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_98
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 13
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d8a4498c6a7ea560800000000000000
+      internalID: 7326928250356410585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_99
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 19
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b261217a83d9db0800000000000000
+      internalID: -4783604938983462021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_100
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 8
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61407920522255950800000000000000
+      internalID: 6437088784748577814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_101
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 7
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a859e9c278432f60800000000000000
+      internalID: 8008324220245858465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_102
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 6
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a0c50691683c9e10800000000000000
+      internalID: 2205699909284642984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_103
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 8
+        width: 18
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab925ebdc607be5f0800000000000000
+      internalID: -726363302042195526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_104
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 6
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 164b5cea09200dee0800000000000000
+      internalID: -1238487077096147871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_105
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 13
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8139216b4894300800000000000000
+      internalID: 236866372944206046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_106
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 8
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b25fb36d0e7a5aa90800000000000000
+      internalID: -7303246636602624725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_107
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 5
+        width: 27
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1b45ffabb2f24a00800000000000000
+      internalID: 739420176767077149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_108
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 14
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba603447effc78d50800000000000000
+      internalID: 6739584059162429099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_109
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 8
+        width: 18
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad5d766a07d9baaa0800000000000000
+      internalID: -6148647759090559526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_110
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 5
+        width: 27
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e2bb629c9a502a50800000000000000
+      internalID: 6494290291186184932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sheet-metal-monster-blue_111
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 12
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 213b7b5f2d34749c0800000000000000
+      internalID: -3943108375394929902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sheet-metal-monster-blue_0: -7296521159537100608
+      sheet-metal-monster-blue_1: 7319007628467183333
+      sheet-metal-monster-blue_10: 2143048123686453482
+      sheet-metal-monster-blue_100: 6437088784748577814
+      sheet-metal-monster-blue_101: 8008324220245858465
+      sheet-metal-monster-blue_102: 2205699909284642984
+      sheet-metal-monster-blue_103: -726363302042195526
+      sheet-metal-monster-blue_104: -1238487077096147871
+      sheet-metal-monster-blue_105: 236866372944206046
+      sheet-metal-monster-blue_106: -7303246636602624725
+      sheet-metal-monster-blue_107: 739420176767077149
+      sheet-metal-monster-blue_108: 6739584059162429099
+      sheet-metal-monster-blue_109: -6148647759090559526
+      sheet-metal-monster-blue_11: -3858883855768755580
+      sheet-metal-monster-blue_110: 6494290291186184932
+      sheet-metal-monster-blue_111: -3943108375394929902
+      sheet-metal-monster-blue_12: -3215575957887927361
+      sheet-metal-monster-blue_13: -2104719296242322687
+      sheet-metal-monster-blue_14: 6214213062710013474
+      sheet-metal-monster-blue_15: -2565378721912966781
+      sheet-metal-monster-blue_16: -7115811428427548236
+      sheet-metal-monster-blue_17: 2584841307620404342
+      sheet-metal-monster-blue_18: -5291562641565385426
+      sheet-metal-monster-blue_19: -3097391352713328944
+      sheet-metal-monster-blue_2: 6540547662715876947
+      sheet-metal-monster-blue_20: 7194985360871746315
+      sheet-metal-monster-blue_21: -9091038331786176904
+      sheet-metal-monster-blue_22: 4968610494238392399
+      sheet-metal-monster-blue_23: -7859988909701827846
+      sheet-metal-monster-blue_24: -7695868237981829497
+      sheet-metal-monster-blue_25: 2540269998652606350
+      sheet-metal-monster-blue_26: -7407511336905040908
+      sheet-metal-monster-blue_27: 8914899148218134869
+      sheet-metal-monster-blue_28: -6860575095507282882
+      sheet-metal-monster-blue_29: 4352214214029934790
+      sheet-metal-monster-blue_3: -5380572792328080796
+      sheet-metal-monster-blue_30: 2862257845158759299
+      sheet-metal-monster-blue_31: 6384924257927415114
+      sheet-metal-monster-blue_32: 4873876001659934744
+      sheet-metal-monster-blue_33: -4410532721931615910
+      sheet-metal-monster-blue_34: 1915963342943140488
+      sheet-metal-monster-blue_35: -5299706812758437236
+      sheet-metal-monster-blue_36: 545877180768855208
+      sheet-metal-monster-blue_37: 9128351000430338810
+      sheet-metal-monster-blue_38: -1245065621777263482
+      sheet-metal-monster-blue_39: -1267527256693446716
+      sheet-metal-monster-blue_4: -8944009519393860819
+      sheet-metal-monster-blue_40: 8080512071396944827
+      sheet-metal-monster-blue_41: 5461265197557593221
+      sheet-metal-monster-blue_42: -6171735380486751885
+      sheet-metal-monster-blue_43: -1253515642807053367
+      sheet-metal-monster-blue_44: -2689922328497252288
+      sheet-metal-monster-blue_45: 3558264245749537538
+      sheet-metal-monster-blue_46: -4621685359300425124
+      sheet-metal-monster-blue_47: 6019468940872000067
+      sheet-metal-monster-blue_48: 6735653267556411418
+      sheet-metal-monster-blue_49: 3656917648686603452
+      sheet-metal-monster-blue_5: 2433221701573544539
+      sheet-metal-monster-blue_50: 4309948010860957650
+      sheet-metal-monster-blue_51: -3914355532216969547
+      sheet-metal-monster-blue_52: -4245401319346503057
+      sheet-metal-monster-blue_53: -1978465334689605083
+      sheet-metal-monster-blue_54: -8105106777778802389
+      sheet-metal-monster-blue_55: -7988092218425871179
+      sheet-metal-monster-blue_56: 5628131756113041003
+      sheet-metal-monster-blue_57: -5907988151733708604
+      sheet-metal-monster-blue_58: 9009884138219290857
+      sheet-metal-monster-blue_59: 8377722891941947401
+      sheet-metal-monster-blue_6: 3355985373800977328
+      sheet-metal-monster-blue_60: 3508197959194646402
+      sheet-metal-monster-blue_61: -6154861489799381712
+      sheet-metal-monster-blue_62: 4493382290025092999
+      sheet-metal-monster-blue_63: -2573470139750246498
+      sheet-metal-monster-blue_64: -5636982324924510936
+      sheet-metal-monster-blue_65: 763252401454469741
+      sheet-metal-monster-blue_66: -8034625950310300606
+      sheet-metal-monster-blue_67: 1592360033107382348
+      sheet-metal-monster-blue_68: -2293763256893702230
+      sheet-metal-monster-blue_69: -4624435653137700445
+      sheet-metal-monster-blue_7: -1190909015963076925
+      sheet-metal-monster-blue_70: 7347585914875722427
+      sheet-metal-monster-blue_71: -5356781790215367673
+      sheet-metal-monster-blue_72: -665570224891695341
+      sheet-metal-monster-blue_73: -4837926059809145930
+      sheet-metal-monster-blue_74: 1113855959148158816
+      sheet-metal-monster-blue_75: 6528379944554215800
+      sheet-metal-monster-blue_76: -5718095330257600864
+      sheet-metal-monster-blue_77: -2920236335966909688
+      sheet-metal-monster-blue_78: 1848345303553679670
+      sheet-metal-monster-blue_79: 5958683158173951255
+      sheet-metal-monster-blue_8: -8522109532593400056
+      sheet-metal-monster-blue_80: -8788793192965237469
+      sheet-metal-monster-blue_81: -3579410453430894385
+      sheet-metal-monster-blue_82: 5780751422859668731
+      sheet-metal-monster-blue_83: 659685357461308882
+      sheet-metal-monster-blue_84: -3732466076295630637
+      sheet-metal-monster-blue_85: 4373906556744393236
+      sheet-metal-monster-blue_86: 4832784873551814537
+      sheet-metal-monster-blue_87: -5928285080127627727
+      sheet-metal-monster-blue_88: -2206401654088736011
+      sheet-metal-monster-blue_89: 67788883196916038
+      sheet-metal-monster-blue_9: 6309459693039538908
+      sheet-metal-monster-blue_90: 232224467913090413
+      sheet-metal-monster-blue_91: -864803187077891662
+      sheet-metal-monster-blue_92: -511827494029816885
+      sheet-metal-monster-blue_93: 5454035037784780037
+      sheet-metal-monster-blue_94: -8221688893761748601
+      sheet-metal-monster-blue_95: -8850285734440741299
+      sheet-metal-monster-blue_96: -4209615106730146785
+      sheet-metal-monster-blue_97: 3881315838546891714
+      sheet-metal-monster-blue_98: 7326928250356410585
+      sheet-metal-monster-blue_99: -4783604938983462021
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
