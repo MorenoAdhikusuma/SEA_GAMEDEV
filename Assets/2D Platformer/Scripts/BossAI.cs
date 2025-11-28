@@ -7,6 +7,8 @@ public class BossAI : MonoBehaviour
     public Animator anim;
     public Rigidbody2D rb;
     public Transform firePoint;
+    public CircleCollider2D meleeHitbox;   // 🔥 your circle melee collider object
+    private SpriteRenderer sr;             // sprite renderer of Boss
 
     [Header("Stats")]
     public float maxHealth = 100;
@@ -18,15 +20,18 @@ public class BossAI : MonoBehaviour
     private float attackTimer = 0f;
     private bool isDead = false;
     private bool playerInRange = false;
-
-    private SpriteRenderer sr;   // ← we flip only the sprite, not the whole Boss
+    public bool isAttacking = false;
 
     void Start()
     {
         currentHealth = maxHealth;
         anim.SetBool("walk", false);
 
-        sr = GetComponent<SpriteRenderer>(); // get sprite renderer on Boss root
+        sr = GetComponent<SpriteRenderer>();
+
+        // disable melee hitbox at start
+        if (meleeHitbox != null)
+            meleeHitbox.enabled = false;
     }
 
     void Update()
@@ -35,14 +40,14 @@ public class BossAI : MonoBehaviour
 
         attackTimer -= Time.deltaTime;
 
-        // If player is not in detection zone → idle
+        // No player detected = idle
         if (!playerInRange)
         {
             anim.SetBool("walk", false);
             return;
         }
 
-        // Flip only the sprite
+        // Flip sprite to face player
         FlipTowardsPlayer();
 
         float distance = Vector2.Distance(transform.position, player.position);
@@ -56,14 +61,20 @@ public class BossAI : MonoBehaviour
         TryAttack();
     }
 
-void FlipTowardsPlayer()
-{
-    if (player.position.x > transform.position.x)
-        sr.flipX = true;    // player on right → flip sprite
-    else
-        sr.flipX = false;   // player on left  → normal
-}
+    // ----------------------------------------------
+    //              FLIP TOWARDS PLAYER
+    // ----------------------------------------------
+    void FlipTowardsPlayer()
+    {
+        if (player.position.x > transform.position.x)
+            sr.flipX = true;     // facing right
+        else
+            sr.flipX = false;    // facing left
+    }
 
+    // ----------------------------------------------
+    //                MOVEMENT
+    // ----------------------------------------------
     void WalkTowardPlayer()
     {
         anim.SetBool("walk", true);
@@ -74,17 +85,40 @@ void FlipTowardsPlayer()
         rb.MovePosition(newPos);
     }
 
+    // ----------------------------------------------
+    //            ATTACKING LOGIC
+    // ----------------------------------------------
     void TryAttack()
     {
         anim.SetBool("walk", false);
 
         if (attackTimer <= 0)
         {
+            isAttacking = true;
             anim.SetTrigger("Melee");
             attackTimer = attackCooldown;
         }
     }
 
+    // called by Animation Event
+    public void EnableMeleeHitbox()
+    {
+        if (meleeHitbox != null)
+            meleeHitbox.enabled = true;
+    }
+
+    // called by Animation Event
+    public void DisableMeleeHitbox()
+    {
+        if (meleeHitbox != null)
+            meleeHitbox.enabled = false;
+
+        isAttacking = false;
+    }
+
+    // ----------------------------------------------
+    //                  DAMAGE
+    // ----------------------------------------------
     public void TakeDamage(float amount)
     {
         if (isDead) return;
@@ -112,9 +146,9 @@ void FlipTowardsPlayer()
         Destroy(gameObject, 2f);
     }
 
-    // ------------------------------
-    // DETECTION ZONE TRIGGER LOGIC
-    // ------------------------------
+    // ----------------------------------------------
+    //        DETECTION AREA TRIGGER
+    // ----------------------------------------------
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
