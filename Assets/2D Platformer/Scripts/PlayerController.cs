@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Platformer
 {
     public class PlayerController : MonoBehaviour
     {
+        private static PlayerController instance;
+
         public float movingSpeed;
         public float jumpForce;
         private float moveInput;
-
         private bool facingRight = false;
         [HideInInspector]
         public bool deathState = false;
@@ -21,70 +23,120 @@ namespace Platformer
         private Animator animator;
         private GameManager gameManager;
 
+        public AudioSource jump;
+        public AudioSource death;
+
+        public Transform firePoint;
+        public GameObject bulletPrefab;
+        public float bulletSpeed = 10f;
+        public float fireRate = 0.5f;
+        private float nextFireTime = 0f;
+
+        bool jumpPressed = false;
+        void Awake()
+        {
+            if (instance != null && instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
         void Start()
         {
             rigidbody = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
-            gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        }
+            gameManager = FindObjectOfType<GameManager>();
 
+            MoveToSpawn(); // ensure correct position on scene start
+        }
         private void FixedUpdate()
         {
-            CheckGround();
-        }
+            if (DialogueManager.instance != null && DialogueManager.instance.isDialogueActive)
+                return;
 
+            CheckGround();
+
+            if (jumpPressed && isGrounded)
+            {
+                rigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
+                jump.Play();
+                jumpPressed = false;
+            }
+        }
         void Update()
         {
-            if (Input.GetButton("Horizontal")) 
+            if (DialogueManager.instance != null && DialogueManager.instance.isDialogueActive)
+            {
+                moveInput = 0;
+                animator.SetInteger("playerState", 0);
+                return;
+            }
+
+            // MOVEMENT
+            if (Input.GetButton("Horizontal"))
             {
                 moveInput = Input.GetAxis("Horizontal");
                 Vector3 direction = transform.right * moveInput;
-                transform.position = Vector3.MoveTowards(transform.position, transform.position + direction, movingSpeed * Time.deltaTime);
-                animator.SetInteger("playerState", 1); // Turn on run animation
+
+                transform.position = Vector3.MoveTowards(
+                    transform.position,
+                    transform.position + direction,
+                    movingSpeed * Time.deltaTime
+                );
+
+                animator.SetInteger("playerState", 1);
             }
             else
             {
-                if (isGrounded) animator.SetInteger("playerState", 0); // Turn on idle animation
+                if (isGrounded)
+                    animator.SetInteger("playerState", 0);
             }
-            if(Input.GetKeyDown(KeyCode.Space) && isGrounded )
-            {
-                rigidbody.AddForce(transform.up * jumpForce, ForceMode2D.Impulse);
-            }
-            if (!isGrounded)animator.SetInteger("playerState", 2); // Turn on jump animation
 
-            if(facingRight == false && moveInput > 0)
-            {
+            // JUMP
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+                jumpPressed = true;
+
+            if (!isGrounded)
+                animator.SetInteger("playerState", 2);
+
+            // FLIP
+            if (!facingRight && moveInput > 0)
                 Flip();
-            }
-            else if(facingRight == true && moveInput < 0)
-            {
+            else if (facingRight && moveInput < 0)
                 Flip();
+
+            // SHOOT
+            if (Input.GetMouseButtonDown(0) && Time.time >= nextFireTime)
+            {
+                ProjectileShoot();
+                nextFireTime = Time.time + fireRate;
             }
         }
-
         private void Flip()
         {
             facingRight = !facingRight;
-            Vector3 Scaler = transform.localScale;
-            Scaler.x *= -1;
-            transform.localScale = Scaler;
+            Vector3 scaler = transform.localScale;
+            scaler.x *= -1;
+            transform.localScale = scaler;
         }
-
         private void CheckGround()
         {
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.transform.position, 0.2f);
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(
+                groundCheck.transform.position,
+                0.2f
+            );
+
             isGrounded = colliders.Length > 1;
         }
-
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.tag == "Enemy")
+            if (other.gameObject.tag == "Enemy" && deathState == false)
             {
-                deathState = true; // Say to GameManager that player is dead
-            }
-            else
-            {
-                deathState = false;
+                deathState = true;
+                death.Play();
             }
         }
 
@@ -96,5 +148,50 @@ namespace Platformer
                 Destroy(other.gameObject);
             }
         }
+        private void ProjectileShoot()
+        {
+            Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition.z = 0f;
+
+            Vector2 direction = (mousePosition - transform.position).normalized;
+
+            GameObject projectile = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+
+            Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
+            rb.linearVelocity = direction * bulletSpeed;
+        }
+
+        void OnLevelWasLoaded(int level)
+        {
+            MoveToSpawn();
+        }
+
+       public void MoveToSpawn()
+{
+    string spawnID = PlayerPrefs.GetString("SpawnID", "");
+    string currentScene = SceneManager.GetActiveScene().name;
+
+    SpawnPoint[] points = FindObjectsOfType<SpawnPoint>();
+
+    foreach (SpawnPoint p in points)
+    {
+        if (p.spawnID == spawnID && p.SceneName == currentScene)
+        {
+            transform.position = p.transform.position;
+            return;
+        }
+    }
+
+    // Fallback: use any spawn from this scene
+    foreach (SpawnPoint p in points)
+    {
+        if (p.SceneName == currentScene)
+        {
+            transform.position = p.transform.position;
+            return;
+        }
+    }
+}
+
     }
 }
