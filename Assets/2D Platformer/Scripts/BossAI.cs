@@ -121,14 +121,36 @@ public class BossAI : MonoBehaviour
     // ----------------------------------------------
     public void TakeDamage(float amount)
     {
-        if (isDead) return;
+        // if (isDead) return;
+
+        // currentHealth -= amount;
+        // anim.SetTrigger("hit");
+
+        // if (currentHealth <= 0)
+        //     Die();
+
+        if(isDead)return;
+
+        float hpPercent = (currentHealth / maxHealth) * 100f;
+
+        if(damageLocked)
+        return;
+
+        if(hpPercent <= stopDamageThreshold)
+        {
+            damageLocked = true;
+            return;
+        }
 
         currentHealth -= amount;
         anim.SetTrigger("hit");
 
-        if (currentHealth <= 0)
-            Die();
+        if(currentHealth <= 0)
+        Die();
     }
+
+    public float stopDamageThreshold = 30f;
+    public bool damageLocked = false;
 
     void Die()
     {

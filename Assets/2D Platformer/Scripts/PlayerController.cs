@@ -15,6 +15,7 @@ namespace Platformer
         private bool facingRight = true;   // FIX: default true (most sprites face right)
         [HideInInspector]
         public bool deathState = false;
+        public LayerMask groundLayer;
 
         private bool isGrounded;
         public Transform groundCheck;
@@ -25,6 +26,7 @@ namespace Platformer
 
         public AudioSource jump;
         public AudioSource death;
+        public AudioSource footStep;
 
         public Transform firePoint;
         public GameObject bulletPrefab;
@@ -106,6 +108,17 @@ namespace Platformer
                     animator.SetInteger("playerState", 0);
             }
 
+             if(horizontal != 0 && isGrounded)
+            {
+                if(!footStep.isPlaying)
+                footStep.Play();
+            }
+            else
+            {
+                if(footStep.isPlaying)
+                footStep.Stop();
+            }
+
             // ===============================
             // FIXED FLIP LOGIC
             // ===============================
@@ -141,12 +154,18 @@ namespace Platformer
 
         private void CheckGround()
         {
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(
-                groundCheck.transform.position,
-                0.2f
-            );
+            // Collider2D[] colliders = Physics2D.OverlapCircleAll(
+            //     groundCheck.transform.position,
+            //     0.2f
+            // );
 
-            isGrounded = colliders.Length > 1;
+            // isGrounded = colliders.Length > 1;
+
+            isGrounded = Physics2D.OverlapCircle(
+                groundCheck.position,
+                0.2f,
+                groundLayer
+            );
         }
 
         private void OnCollisionEnter2D(Collision2D other)
