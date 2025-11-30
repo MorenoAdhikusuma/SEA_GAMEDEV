@@ -8,6 +8,7 @@ TagManager:
   - Coin
   - Boss
   - Ground
+  - BossMelee
   layers:
   - Default
   - TransparentFX

@@ -12,10 +12,9 @@ namespace Platformer
         public float movingSpeed;
         public float jumpForce;
         private float moveInput;
-        private bool facingRight = true;   // FIX: default true (most sprites face right)
+        private bool facingRight = true;
         [HideInInspector]
         public bool deathState = false;
-        public LayerMask groundLayer;
 
         private bool isGrounded;
         public Transform groundCheck;
@@ -26,7 +25,7 @@ namespace Platformer
 
         public AudioSource jump;
         public AudioSource death;
-        public AudioSource footStep;
+        public AudioSource walk;
 
         public Transform firePoint;
         public GameObject bulletPrefab;
@@ -36,7 +35,7 @@ namespace Platformer
 
         bool jumpPressed = false;
 
-        [SerializeField] private SpriteRenderer spriteRenderer;   // FIX: SpriteRenderer flip method
+        [SerializeField] private SpriteRenderer spriteRenderer;
 
 
         void Awake()
@@ -75,8 +74,12 @@ namespace Platformer
             }
         }
 
+        // =====================================================
+        // UPDATE
+        // =====================================================
         void Update()
         {
+            // Freeze movement during dialogue
             if (DialogueManager.instance != null && DialogueManager.instance.isDialogueActive)
             {
                 moveInput = 0;
@@ -84,12 +87,12 @@ namespace Platformer
                 return;
             }
 
-            // ===============================
-            // FIXED MOVEMENT INPUT
-            // ===============================
             float horizontal = Input.GetAxisRaw("Horizontal");
             moveInput = horizontal;
 
+            // ---------------------------
+            // MOVEMENT
+            // ---------------------------
             if (horizontal != 0)
             {
                 Vector3 direction = transform.right * horizontal;
@@ -101,40 +104,41 @@ namespace Platformer
                 );
 
                 animator.SetInteger("playerState", 1);
+
+                // WALK SOUND
+                if (isGrounded && !walk.isPlaying)
+                    walk.Play();
             }
             else
             {
                 if (isGrounded)
                     animator.SetInteger("playerState", 0);
+
+                // STOP WALKING SOUND
+                if (walk.isPlaying)
+                    walk.Stop();
             }
 
-             if(horizontal != 0 && isGrounded)
-            {
-                if(!footStep.isPlaying)
-                footStep.Play();
-            }
-            else
-            {
-                if(footStep.isPlaying)
-                footStep.Stop();
-            }
-
-            // ===============================
-            // FIXED FLIP LOGIC
-            // ===============================
+            // ---------------------------
+            // FLIP
+            // ---------------------------
             if (horizontal > 0 && !facingRight)
                 Flip();
             else if (horizontal < 0 && facingRight)
                 Flip();
 
+            // ---------------------------
             // JUMP
+            // ---------------------------
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
                 jumpPressed = true;
 
             if (!isGrounded)
                 animator.SetInteger("playerState", 2);
 
+            // ---------------------------
             // SHOOT
+            // ---------------------------
             if (Input.GetMouseButtonDown(0) && Time.time >= nextFireTime)
             {
                 ProjectileShoot();
@@ -143,34 +147,34 @@ namespace Platformer
             }
         }
 
-        // ===============================
-        // FIX: Flip spriteRenderer only
-        // ===============================
+        // =====================================================
+        // FLIP
+        // =====================================================
         private void Flip()
         {
             facingRight = !facingRight;
             spriteRenderer.flipX = !spriteRenderer.flipX;
         }
 
+        // =====================================================
+        // GROUND CHECK
+        // =====================================================
         private void CheckGround()
         {
-            // Collider2D[] colliders = Physics2D.OverlapCircleAll(
-            //     groundCheck.transform.position,
-            //     0.2f
-            // );
-
-            // isGrounded = colliders.Length > 1;
-
-            isGrounded = Physics2D.OverlapCircle(
-                groundCheck.position,
-                0.2f,
-                groundLayer
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(
+                groundCheck.transform.position,
+                0.2f
             );
+
+            isGrounded = colliders.Length > 1;
         }
 
+        // =====================================================
+        // COLLISION
+        // =====================================================
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (other.gameObject.tag == "Enemy" && deathState == false)
+            if (other.gameObject.tag == "Enemy" && !deathState)
             {
                 deathState = true;
                 death.Play();
@@ -185,7 +189,9 @@ namespace Platformer
                 Destroy(other.gameObject);
             }
         }
-
+        // =====================================================
+        // SHOOT
+        // =====================================================
         private void ProjectileShoot()
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -199,11 +205,17 @@ namespace Platformer
             rb.linearVelocity = direction * bulletSpeed;
         }
 
+        // =====================================================
+        // SCENE LOAD
+        // =====================================================
         void OnLevelWasLoaded(int level)
         {
             MoveToSpawn();
         }
 
+        // =====================================================
+        // SPAWN POINT
+        // =====================================================
         public void MoveToSpawn()
         {
             string spawnID = PlayerPrefs.GetString("SpawnID", "");
