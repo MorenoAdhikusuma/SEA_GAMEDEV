@@ -2,57 +2,187 @@ using UnityEngine;
 
 public class BossAI : MonoBehaviour
 {
-    public GameObject projectilePrefab;
-    public float projectileSpeed = 8f;
-    public float fireRate = 1f;
-    public float spreadAngle = 20f;
-    public Transform firePoint;
-
+    [Header("References")]
     public Transform player;
+    public Animator anim;
+    public Rigidbody2D rb;
+    public Transform firePoint;
+    public CircleCollider2D meleeHitbox;   // 🔥 your circle melee collider object
+    private SpriteRenderer sr;             // sprite renderer of Boss
 
-    private float fireTimer;
+    [Header("Stats")]
+    public float maxHealth = 100;
+    public float currentHealth;
+    public float moveSpeed = 2f;
+    public float attackRange = 2f;
+    public float attackCooldown = 2f;
+
+    private float attackTimer = 0f;
+    private bool isDead = false;
+    private bool playerInRange = false;
+    public bool isAttacking = false;
+
+    void Start()
+    {
+        currentHealth = maxHealth;
+        anim.SetBool("walk", false);
+
+        sr = GetComponent<SpriteRenderer>();
+
+        // disable melee hitbox at start
+        if (meleeHitbox != null)
+            meleeHitbox.enabled = false;
+    }
 
     void Update()
     {
-        if (player == null) return;
+        if (isDead || player == null) return;
 
-        fireTimer -= Time.deltaTime;
-        if (fireTimer <= 0)
+        attackTimer -= Time.deltaTime;
+
+        // No player detected = idle
+        if (!playerInRange)
         {
-            ShootAtPlayerWithSpread();
-            fireTimer = fireRate;
+            anim.SetBool("walk", false);
+            return;
+        }
+
+        // Flip sprite to face player
+        FlipTowardsPlayer();
+
+        float distance = Vector2.Distance(transform.position, player.position);
+
+        if (distance > attackRange)
+        {
+            WalkTowardPlayer();
+            return;
+        }
+
+        TryAttack();
+    }
+
+    // ----------------------------------------------
+    //              FLIP TOWARDS PLAYER
+    // ----------------------------------------------
+    void FlipTowardsPlayer()
+    {
+        if (player.position.x > transform.position.x)
+            sr.flipX = true;     // facing right
+        else
+            sr.flipX = false;    // facing left
+    }
+
+    // ----------------------------------------------
+    //                MOVEMENT
+    // ----------------------------------------------
+    void WalkTowardPlayer()
+    {
+        anim.SetBool("walk", true);
+
+        Vector2 target = new Vector2(player.position.x, transform.position.y);
+        Vector2 newPos = Vector2.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
+
+        rb.MovePosition(newPos);
+    }
+
+    // ----------------------------------------------
+    //            ATTACKING LOGIC
+    // ----------------------------------------------
+    void TryAttack()
+    {
+        anim.SetBool("walk", false);
+
+        if (attackTimer <= 0)
+        {
+            isAttacking = true;
+            anim.SetTrigger("Melee");
+            attackTimer = attackCooldown;
         }
     }
 
-    void ShootAtPlayerWithSpread()
+    // called by Animation Event
+    public void EnableMeleeHitbox()
     {
-        // Base direction toward player
-        Vector2 baseDir = (player.position - firePoint.position).normalized;
+        if (meleeHitbox != null)
+            meleeHitbox.enabled = true;
+    }
 
-        // Convert direction to angle
-        float baseAngle = Mathf.Atan2(baseDir.y, baseDir.x) * Mathf.Rad2Deg;
+    // called by Animation Event
+    public void DisableMeleeHitbox()
+    {
+        if (meleeHitbox != null)
+            meleeHitbox.enabled = false;
 
-        // Add spread
-        float randomOffset = Random.Range(-spreadAngle, spreadAngle);
-        float finalAngle = baseAngle + randomOffset;
+        isAttacking = false;
+    }
 
-        // Fix offset because projectile sprite points UP by default
-        float spriteOffset = -90f;
-        float finalAngleWithOffset = finalAngle + spriteOffset;
+    // ----------------------------------------------
+    //                  DAMAGE
+    // ----------------------------------------------
+    public void TakeDamage(float amount)
+    {
+        // if (isDead) return;
 
-        // Convert final angle to direction
-        float rad = finalAngle * Mathf.Deg2Rad;
-        Vector2 finalDir = new Vector2(Mathf.Cos(rad), Mathf.Sin(rad)).normalized;
+        // currentHealth -= amount;
+        // anim.SetTrigger("hit");
 
-        // Spawn projectile
-        GameObject proj = Instantiate(
-            projectilePrefab,
-            firePoint.position,
-            Quaternion.Euler(0f, 0f, finalAngleWithOffset)
-        );
+        // if (currentHealth <= 0)
+        //     Die();
 
-        // Move projectile
-        Rigidbody2D rb = proj.GetComponent<Rigidbody2D>();
-        rb.linearVelocity = finalDir * projectileSpeed;
+        if(isDead)return;
+
+        float hpPercent = (currentHealth / maxHealth) * 100f;
+
+        if(damageLocked)
+        return;
+
+        if(hpPercent <= stopDamageThreshold)
+        {
+            damageLocked = true;
+            return;
+        }
+
+        currentHealth -= amount;
+        anim.SetTrigger("hit");
+
+        if(currentHealth <= 0)
+        Die();
+    }
+
+    public float stopDamageThreshold = 30f;
+    public bool damageLocked = false;
+
+    void Die()
+    {
+        isDead = true;
+
+        anim.SetTrigger("death");
+        anim.SetBool("walk", false);
+
+        rb.linearVelocity = Vector2.zero;
+        rb.isKinematic = true;
+
+        foreach (Collider2D col in GetComponentsInChildren<Collider2D>())
+            col.enabled = false;
+
+        Destroy(gameObject, 2f);
+    }
+
+    // ----------------------------------------------
+    //        DETECTION AREA TRIGGER
+    // ----------------------------------------------
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+            playerInRange = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
+            anim.SetBool("walk", false);
+        }
     }
 }

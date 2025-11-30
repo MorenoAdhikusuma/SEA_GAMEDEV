@@ -12,9 +12,10 @@ namespace Platformer
         public float movingSpeed;
         public float jumpForce;
         private float moveInput;
-        private bool facingRight = false;
+        private bool facingRight = true;   // FIX: default true (most sprites face right)
         [HideInInspector]
         public bool deathState = false;
+        public LayerMask groundLayer;
 
         private bool isGrounded;
         public Transform groundCheck;
@@ -25,6 +26,7 @@ namespace Platformer
 
         public AudioSource jump;
         public AudioSource death;
+        public AudioSource footStep;
 
         public Transform firePoint;
         public GameObject bulletPrefab;
@@ -33,6 +35,10 @@ namespace Platformer
         private float nextFireTime = 0f;
 
         bool jumpPressed = false;
+
+        [SerializeField] private SpriteRenderer spriteRenderer;   // FIX: SpriteRenderer flip method
+
+
         void Awake()
         {
             if (instance != null && instance != this)
@@ -44,14 +50,16 @@ namespace Platformer
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+
         void Start()
         {
             rigidbody = GetComponent<Rigidbody2D>();
             animator = GetComponent<Animator>();
             gameManager = FindObjectOfType<GameManager>();
 
-            MoveToSpawn(); // ensure correct position on scene start
+            MoveToSpawn();
         }
+
         private void FixedUpdate()
         {
             if (DialogueManager.instance != null && DialogueManager.instance.isDialogueActive)
@@ -66,6 +74,7 @@ namespace Platformer
                 jumpPressed = false;
             }
         }
+
         void Update()
         {
             if (DialogueManager.instance != null && DialogueManager.instance.isDialogueActive)
@@ -75,11 +84,15 @@ namespace Platformer
                 return;
             }
 
-            // MOVEMENT
-            if (Input.GetButton("Horizontal"))
+            // ===============================
+            // FIXED MOVEMENT INPUT
+            // ===============================
+            float horizontal = Input.GetAxisRaw("Horizontal");
+            moveInput = horizontal;
+
+            if (horizontal != 0)
             {
-                moveInput = Input.GetAxis("Horizontal");
-                Vector3 direction = transform.right * moveInput;
+                Vector3 direction = transform.right * horizontal;
 
                 transform.position = Vector3.MoveTowards(
                     transform.position,
@@ -95,6 +108,25 @@ namespace Platformer
                     animator.SetInteger("playerState", 0);
             }
 
+             if(horizontal != 0 && isGrounded)
+            {
+                if(!footStep.isPlaying)
+                footStep.Play();
+            }
+            else
+            {
+                if(footStep.isPlaying)
+                footStep.Stop();
+            }
+
+            // ===============================
+            // FIXED FLIP LOGIC
+            // ===============================
+            if (horizontal > 0 && !facingRight)
+                Flip();
+            else if (horizontal < 0 && facingRight)
+                Flip();
+
             // JUMP
             if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
                 jumpPressed = true;
@@ -102,35 +134,40 @@ namespace Platformer
             if (!isGrounded)
                 animator.SetInteger("playerState", 2);
 
-            // FLIP
-            if (!facingRight && moveInput > 0)
-                Flip();
-            else if (facingRight && moveInput < 0)
-                Flip();
-
             // SHOOT
             if (Input.GetMouseButtonDown(0) && Time.time >= nextFireTime)
             {
                 ProjectileShoot();
+                animator.SetTrigger("Shoot");
                 nextFireTime = Time.time + fireRate;
             }
         }
+
+        // ===============================
+        // FIX: Flip spriteRenderer only
+        // ===============================
         private void Flip()
         {
             facingRight = !facingRight;
-            Vector3 scaler = transform.localScale;
-            scaler.x *= -1;
-            transform.localScale = scaler;
+            spriteRenderer.flipX = !spriteRenderer.flipX;
         }
+
         private void CheckGround()
         {
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(
-                groundCheck.transform.position,
-                0.2f
-            );
+            // Collider2D[] colliders = Physics2D.OverlapCircleAll(
+            //     groundCheck.transform.position,
+            //     0.2f
+            // );
 
-            isGrounded = colliders.Length > 1;
+            // isGrounded = colliders.Length > 1;
+
+            isGrounded = Physics2D.OverlapCircle(
+                groundCheck.position,
+                0.2f,
+                groundLayer
+            );
         }
+
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (other.gameObject.tag == "Enemy" && deathState == false)
@@ -148,6 +185,7 @@ namespace Platformer
                 Destroy(other.gameObject);
             }
         }
+
         private void ProjectileShoot()
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -166,32 +204,30 @@ namespace Platformer
             MoveToSpawn();
         }
 
-       public void MoveToSpawn()
-{
-    string spawnID = PlayerPrefs.GetString("SpawnID", "");
-    string currentScene = SceneManager.GetActiveScene().name;
-
-    SpawnPoint[] points = FindObjectsOfType<SpawnPoint>();
-
-    foreach (SpawnPoint p in points)
-    {
-        if (p.spawnID == spawnID && p.SceneName == currentScene)
+        public void MoveToSpawn()
         {
-            transform.position = p.transform.position;
-            return;
-        }
-    }
+            string spawnID = PlayerPrefs.GetString("SpawnID", "");
+            string currentScene = SceneManager.GetActiveScene().name;
 
-    // Fallback: use any spawn from this scene
-    foreach (SpawnPoint p in points)
-    {
-        if (p.SceneName == currentScene)
-        {
-            transform.position = p.transform.position;
-            return;
-        }
-    }
-}
+            SpawnPoint[] points = FindObjectsOfType<SpawnPoint>();
 
+            foreach (SpawnPoint p in points)
+            {
+                if (p.spawnID == spawnID && p.SceneName == currentScene)
+                {
+                    transform.position = p.transform.position;
+                    return;
+                }
+            }
+
+            foreach (SpawnPoint p in points)
+            {
+                if (p.SceneName == currentScene)
+                {
+                    transform.position = p.transform.position;
+                    return;
+                }
+            }
+        }
     }
 }
