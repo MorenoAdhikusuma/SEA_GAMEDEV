@@ -1,0 +1,35 @@
+[33mc63a178[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: checkout: moving from feat/boss to main
+[33m73f2090[m[33m ([m[1;32mfeat/boss[m[33m)[m HEAD@{1}: commit: Fix : BUGS ALL STAGES
+[33m5261c87[m[33m ([m[1;31morigin/feat/boss[m[33m)[m HEAD@{2}: pull: Fast-forward
+[33mf479793[m HEAD@{3}: commit (merge): Merge feat/core into feat/boss — resolved meta conflicts
+[33m8b51a08[m HEAD@{4}: checkout: moving from feat/core to feat/boss
+[33ma87488d[m[33m ([m[1;31morigin/feat/core[m[33m, [m[1;32mfeat/core[m[33m)[m HEAD@{5}: checkout: moving from feat/boss to feat/core
+[33m8b51a08[m HEAD@{6}: pull: Fast-forward
+[33m44af8a3[m HEAD@{7}: reset: moving to HEAD
+[33m44af8a3[m HEAD@{8}: commit: feat:boss pukul pukul
+[33m813311a[m HEAD@{9}: commit: Fix: Orientation of the Boss when facing player are flipped
+[33md5c0114[m HEAD@{10}: commit: added boss anim, melee, and shyts
+[33m0c5c4b7[m HEAD@{11}: checkout: moving from feat/boss to feat/boss
+[33m0c5c4b7[m HEAD@{12}: commit: added main_player anim
+[33m6992fff[m HEAD@{13}: pull: Fast-forward
+[33mf5fb0c4[m HEAD@{14}: pull: Fast-forward
+[33mf9b0260[m HEAD@{15}: checkout: moving from feat/ui to feat/boss
+[33m29e3cb3[m[33m ([m[1;32mfeat/UI[m[33m)[m HEAD@{16}: checkout: moving from feat/boss to feat/ui
+[33mf9b0260[m HEAD@{17}: pull: Fast-forward
+[33m34d8a57[m HEAD@{18}: reset: moving to HEAD
+[33m34d8a57[m HEAD@{19}: commit: Combining Scenes
+[33mc2ba87a[m HEAD@{20}: pull: Fast-forward
+[33m0777c03[m HEAD@{21}: pull: Fast-forward
+[33mea60183[m HEAD@{22}: reset: moving to HEAD
+[33mea60183[m HEAD@{23}: checkout: moving from feat/UI to feat/boss
+[33m29e3cb3[m[33m ([m[1;32mfeat/UI[m[33m)[m HEAD@{24}: checkout: moving from feat/boss to feat/UI
+[33mea60183[m HEAD@{25}: checkout: moving from feat/UI to feat/boss
+[33m29e3cb3[m[33m ([m[1;32mfeat/UI[m[33m)[m HEAD@{26}: checkout: moving from feat/boss to feat/UI
+[33mea60183[m HEAD@{27}: commit: random easter egg
+[33m265d2aa[m HEAD@{28}: commit: fix : persistant spawn didnt respawned
+[33m612486f[m HEAD@{29}: commit: fix : when player died it didnt respawn back to scene
+[33mb3d0ea6[m HEAD@{30}: commit: feat : added persistant player for changing scenes
+[33ma7f2f70[m HEAD@{31}: merge origin/feat/core: Merge made by the 'ort' strategy.
+[33m8a68238[m HEAD@{32}: commit: fix : adding moving platform to prefab
+[33mb5a9e87[m HEAD@{33}: checkout: moving from main to feat/boss
+[33mc63a178[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{34}: clone: from https://github.com/MorenoAdhikusuma/SEA_GAMEDEV.git

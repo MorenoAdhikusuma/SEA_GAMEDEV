@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+
 //DIS IS DA MAGIC THAT MAKES DA GAME WORK
 //IDK HOW BUT IT DOES, DONT TOUCH IT PLEASE
 //IF YOU BREAK IT I WILL FIND YOU
@@ -16,11 +17,18 @@ namespace Platformer
 
         public GameObject playerGameObject;
         private PlayerController player;
+
         public GameObject deathPlayerPrefab;
         public Text coinText;
 
+        public static bool Paused = false;
+        public GameObject PauseMenuUI;
+
         private bool isRespawning = false;
 
+        // ------------------------------------------------
+        // SINGLETON
+        // ------------------------------------------------
         void Awake()
         {
             if (instance != null && instance != this)
@@ -31,6 +39,8 @@ namespace Platformer
 
             instance = this;
             DontDestroyOnLoad(gameObject);
+
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
         void Start()
@@ -38,7 +48,7 @@ namespace Platformer
             ReconnectPlayer();
         }
 
-        void OnLevelWasLoaded(int level)
+        void OnSceneLoaded(Scene scene, LoadSceneMode mode)
         {
             ReconnectPlayer();
         }
@@ -51,6 +61,9 @@ namespace Platformer
                 playerGameObject = player.gameObject;
         }
 
+        // ------------------------------------------------
+        // UPDATE LOOP
+        // ------------------------------------------------
         void Update()
         {
             if (coinText != null)
@@ -61,11 +74,20 @@ namespace Platformer
                 StartCoroutine(DeathProcess());
                 player.deathState = false;
             }
+
+            // Pause menu
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (Paused)
+                    Resume();
+                else
+                    Pause();
+            }
         }
 
-        // ---------------------------------------------
-        //          DEATH + RESPAWN SEQUENCE
-        // ---------------------------------------------
+        // ------------------------------------------------
+        // DEATH + RESPAWN SEQUENCE
+        // ------------------------------------------------
         IEnumerator DeathProcess()
         {
             isRespawning = true;
@@ -74,7 +96,7 @@ namespace Platformer
 
             DisablePlayerComponents();
 
-            // Spawn death animation prefab
+            // Death animation prefab
             GameObject deathPlayer = null;
             if (deathPlayerPrefab != null)
             {
@@ -83,7 +105,6 @@ namespace Platformer
                     player.transform.position,
                     player.transform.rotation
                 );
-
                 deathPlayer.transform.localScale = player.transform.localScale;
             }
 
@@ -100,65 +121,82 @@ namespace Platformer
             isRespawning = false;
         }
 
-        // ---------------------------------------------
-        //            DISABLE PLAYER (NOT GAMEOBJECT)
-        // ---------------------------------------------
+        // ------------------------------------------------
+        // DISABLE PLAYER COMPONENTS
+        // ------------------------------------------------
         void DisablePlayerComponents()
         {
-            // Disable movement
             player.enabled = false;
 
-            // Disable animator
             Animator anim = playerGameObject.GetComponent<Animator>();
-            if (anim != null)
-                anim.enabled = false;
+            if (anim != null) anim.enabled = false;
 
-            // Hide sprite
             SpriteRenderer sr = playerGameObject.GetComponent<SpriteRenderer>();
-            if (sr != null)
-                sr.enabled = false;
+            if (sr != null) sr.enabled = false;
 
-            // Reset velocity
             Rigidbody2D rb = playerGameObject.GetComponent<Rigidbody2D>();
-            if (rb != null)
-                rb.linearVelocity = Vector2.zero;
+            if (rb != null) rb.linearVelocity = Vector2.zero;
+
+            Collider2D col = playerGameObject.GetComponent<Collider2D>();
+            if (col != null) col.enabled = false;
         }
 
-        // ---------------------------------------------
-        //                RESPAWN LOGIC
-        // ---------------------------------------------
+        // ------------------------------------------------
+        // RESPAWN
+        // ------------------------------------------------
         public void RespawnPlayer()
         {
             if (player == null)
                 player = FindObjectOfType<PlayerController>();
 
-            // Re-enable everything
             EnablePlayerComponents();
-
         }
 
-        // ---------------------------------------------
-        //            ENABLE PLAYER COMPONENTS
-        // ---------------------------------------------
+        // ------------------------------------------------
+        // ENABLE PLAYER COMPONENTS
+        // ------------------------------------------------
         void EnablePlayerComponents()
         {
-            // Movement
+            if (player == null) return;
+
             player.enabled = true;
 
-            // Animator
             Animator anim = playerGameObject.GetComponent<Animator>();
-            if (anim != null)
-                anim.enabled = true;
+            if (anim != null) anim.enabled = true;
 
-            // Sprite
             SpriteRenderer sr = playerGameObject.GetComponent<SpriteRenderer>();
-            if (sr != null)
-                sr.enabled = true;
+            if (sr != null) sr.enabled = true;
 
-            // Collider
             Collider2D col = playerGameObject.GetComponent<Collider2D>();
-            if (col != null)
-                col.enabled = true;
+            if (col != null) col.enabled = true;
+        }
+
+        // ------------------------------------------------
+        // PAUSE SYSTEM (NOW INSIDE CLASS)
+        // ------------------------------------------------
+        public void Resume()
+        {
+            PauseMenuUI.SetActive(false);
+            Time.timeScale = 1f;
+            Paused = false;
+        }
+
+        public void Pause()
+        {
+            PauseMenuUI.SetActive(true);
+            Time.timeScale = 0f;
+            Paused = true;
+        }
+
+        public void LoadMenu()
+        {
+            SceneManager.LoadScene("PauseMenu");
+            Time.timeScale = 1f;
+        }
+
+        public void QuitGame()
+        {
+            Application.Quit();
         }
     }
 }

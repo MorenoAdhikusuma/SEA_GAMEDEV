@@ -89,7 +89,6 @@ GameObject:
   - component: {fileID: 3131509281024872526}
   - component: {fileID: 2664343170886145861}
   - component: {fileID: 7333027060728404052}
-  - component: {fileID: 1311845566891844523}
   - component: {fileID: 8244030453619802533}
   - component: {fileID: 7450131524942223194}
   - component: {fileID: 8480640469879566697}
@@ -202,31 +201,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1311845566891844523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3729747753470490434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 841ef699512c8634b85e90b769c0fd47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BossAI
-  player: {fileID: 0}
-  anim: {fileID: 8480640469879566697}
-  rb: {fileID: 7333027060728404052}
-  firePoint: {fileID: 4589357766647849076}
-  meleeHitbox: {fileID: 0}
-  maxHealth: 100
-  currentHealth: 100
-  moveSpeed: 2
-  attackRange: 3
-  attackCooldown: 2
-  isAttacking: 0
-  stopDamageThreshold: 30
-  damageLocked: 0
 --- !u!61 &8244030453619802533
 BoxCollider2D:
   m_ObjectHideFlags: 0
