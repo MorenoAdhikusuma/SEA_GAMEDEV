@@ -32,6 +32,9 @@ namespace Platformer
         public float bulletSpeed = 10f;
         public float fireRate = 0.5f;
         private float nextFireTime = 0f;
+        public Transform AttackPos;
+        public LayerMask Enemies;
+        public float AttackRange;
 
         bool jumpPressed = false;
 
@@ -145,6 +148,11 @@ namespace Platformer
                 animator.SetTrigger("Shoot");
                 nextFireTime = Time.time + fireRate;
             }
+            //PUKUL
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                MeleeAttack();
+            }
         }
 
         // =====================================================
@@ -205,6 +213,36 @@ namespace Platformer
             rb.linearVelocity = direction * bulletSpeed;
         }
 
+
+        // =====================================================
+        // MELEE
+        // =====================================================
+        private void MeleeAttack()
+        {
+            animator.SetTrigger("melee");
+            Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(AttackPos.position, AttackRange, Enemies);
+            foreach (Collider2D enemy in enemiesHit)
+            {
+                if (enemy.gameObject.tag == "Enemy")
+                {
+                    Destroy(enemy.gameObject);
+                }
+                  if (enemy.gameObject.tag == "Boss")
+                {
+                    Destroy(enemy.gameObject);
+                }
+            }
+
+        }
+        //DEBUG
+        private void OnDrawGizmosSelected()
+{
+    if (AttackPos == null) return;
+    Gizmos.color = Color.red;
+    Gizmos.DrawWireSphere(AttackPos.position, AttackRange);
+}
+
+
         // =====================================================
         // SCENE LOAD
         // =====================================================
@@ -242,4 +280,6 @@ namespace Platformer
             }
         }
     }
+
+    
 }
